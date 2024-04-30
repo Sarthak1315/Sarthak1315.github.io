@@ -39,7 +39,7 @@ I'm enthusiastic about connecting with like-minded developers, exchanging ideas,
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/>&ensp;
 <img src="https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg" alt="mssql" width="40" height="40"/>&ensp;
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/oracle/oracle-original.svg" alt="oracle" width="40" height="40"/>&ensp;
-<img src="https://github.com/dotnet/brand/blob/main/logo/dotnet-logo.svg" alt="dotnet" width="40" height="40"/>&ensp;
+<img src="https://storage.googleapis.com/myuploads-ad647.appspot.com/aspnet-svgrepo-com.svg" alt="dotnet" width="40" height="40"/>&ensp;
 <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" alt="bootstrap" width="40" height="40"/>&ensp;
 <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman" width="40" height="40"/>&ensp;
 <img src="https://www.adobe.com/content/dam/acom/one-console/icons_rebrand/ps_appicon.svg" alt="photoshop" width="40" height="40"/>&ensp;
