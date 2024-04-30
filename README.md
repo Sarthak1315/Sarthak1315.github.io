@@ -47,7 +47,6 @@ I'm enthusiastic about connecting with like-minded developers, exchanging ideas,
 <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="40" height="40"/>&ensp;
 <img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg" alt="gcp" width="40" height="40"/>&ensp;
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/>&ensp;
-  </a>
 </p>
 
 <br><br>
