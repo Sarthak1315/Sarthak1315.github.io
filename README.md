@@ -49,9 +49,9 @@ I'm enthusiastic about connecting with like-minded developers, exchanging ideas,
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/>&ensp;
 </p>
 <br><br>
-## 💻 Achievement :
+## 🏆 Achievement :
 <p align="left" style="text-decoration: none;">
-  <img src="https://storage.cloud.google.com/myuploads-ad647.appspot.com/Certificate/cybersecurity-roles-processes-operating-system-security.png?authuser=0" alt="linux" width="100" height="100"/>&ensp;
+  <img src="https://storage.googleapis.com/myuploads-ad647.appspot.com/Certificate/cybersecurity-roles-processes-operating-system-security.png" alt="cybersecurity-roles-processes-operating-system-security" width="250" height="250"/>&ensp;
 </p>
 <br><br>
 ## 🌐 Socials:
