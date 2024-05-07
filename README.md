@@ -55,6 +55,7 @@ I'm enthusiastic about connecting with like-minded developers, exchanging ideas,
   <img src="https://storage.googleapis.com/myuploads-ad647.appspot.com/Certificate/cybersecurity-roles-processes-operating-system-security.png" alt="cybersecurity-roles-processes-operating-system-security" width="250" height="250"/>&ensp;
 </p>
 <br><br>
+
 ## 🌐 Socials:
 
 <p align="left">
