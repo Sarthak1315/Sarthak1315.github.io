@@ -19,7 +19,7 @@ While my professional experience is yet to blossom, I am driven to utilize my sk
 
 - 📫 How to reach me **work.sarthakpatel@gmail.com**
 
-- 📄 Know about my experiences [Resume](https://sarthak.thetechocean.me)
+- 📄 Know about my experiences [Resume](https://storage.googleapis.com/myuploads-ad647.appspot.com/Certificate/Sarthak_Patel_Resume.pdf)
 
 
 I'm enthusiastic about connecting with like-minded developers, exchanging ideas, and embarking on collaborative endeavors. Feel free to drop me a message—I'm always up for a chat and excited about the possibilities that lie ahead! 😊
