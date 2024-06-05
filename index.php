@@ -1,10 +1,10 @@
 <?php
 
 if (isset($_POST['Name'])) {
-    $host = "sql101.infinityfree.com";
-     $user = "if0_34540123";
-     $pas = "qVBP9CJfib";
-     $db = "if0_34540123_mess";
+    $host = "";
+     $user = "";
+     $pas = "";
+     $db = "";
 
     $con = mysqli_connect($host, $user, $pas, $db);
 if ($con == null) {
