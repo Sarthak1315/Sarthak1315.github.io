@@ -8,7 +8,7 @@ const testimonial_card = document.querySelectorAll('.testimonial-card');
 const list = document.querySelector('.navbar-menu');
 const navItems = list.querySelectorAll('li');
 const links = list.querySelectorAll('a');
-const def = ["Home", "Service", "Technology","Works","Contacts"];
+const def = ["Home", "Service", "Technology","Certificates","Project","Works","Contacts"];
 let s;
 navItems.forEach(item => {
     const link = item.querySelector('a');
