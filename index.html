@@ -1,32 +1,3 @@
-<!--<?php
-
-if (isset($_POST['Name'])) {
-    $host = "";
-     $user = "";
-     $pas = "";
-     $db = "";
-
-    $con = mysqli_connect($host, $user, $pas, $db);
-if ($con == null) {
-            die("Can not connect.");
-        }
-    $name = $_POST['Name'];
-    $email = $_POST['Email'];
-    $number = $_POST['mobile'];
-
-    $sql = "INSERT INTO `detail` (`name`, `email`, `mobile`,`Date`,`site`) VALUES ('$name', '$email', '$number',CURRENT_DATE(),'sarthak.thetechocean.me');";
-
-    if ($con->query($sql) == true) {
-        echo "<script>alert('Message Send Successfuly');</script>";
-//    echo 'messge send succusfully.....';
-    }else{
-        echo "<script>alert('Message Sending fail..');</script>";
-        $con->error;
-    }
-    $con->close();
-}
-
-?>-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,7 +16,7 @@ if ($con == null) {
     <meta name="revisit-after" content="1 days">
     <meta name="author" content="Sarthak Patel">
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://sarthak.thetechocean.me/" />
+    <meta property="og:url" content="https://sarthak13315.github.io/" />
     <meta property="og:description"
         content="a webpage to showcase my experience, education, skill-set, projects, certificates, achievements and recommendations." />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -73,6 +44,8 @@ if ($con == null) {
                 <li><a class="active" href="#">&lt; Home &gt;</a></li>
                 <li><a class="" href="#introduction">Service</a></li>
                 <li><a class="" href="#techno">Technology</a></li>
+                <li><a class="" href="./certificates.html">Certificates</a></li>
+                <li><a class="" href="https://myai.sarthakpatel1315.workers.dev">Project</a></li>
                 <li><a class="" href="#latest-works">Works</a></li>
                 <li><a class="" href="#footer">Contacts</a></li>
             </ul>
