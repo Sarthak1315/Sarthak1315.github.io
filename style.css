@@ -323,6 +323,7 @@ body::selection {
     position: absolute;
     background: url(assets/s2.png);
     top: 0px;
+    left:45px;
     height: 610px;
     width: 450px;
     background-size: cover;
@@ -966,4 +967,132 @@ body::selection {
   height: 100px;
   width: 130px;
   padding: 5px;
+}
+/* ---------- RESPONSIVE STYLES ---------- */
+@media (max-width: 1024px) {
+  #content-body {
+    flex-direction: column;
+    padding: 20px;
+    height: auto;
+  }
+
+  .body-tail {
+    padding: 40px 0 0 0;
+    flex-wrap: wrap;
+  }
+
+  .body-tail h1,
+  .body-tail p {
+    padding: 10px;
+  }
+
+  .body-part-2 {
+    margin-top: 40px;
+    align-self: center;
+  }
+
+  .background-circle {
+    width: 400px;
+    height: 400px;
+  }
+
+  .hoodie-guy {
+    height: 450px;
+    width: 350px;
+  }
+
+  #introduction {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+  .cards,
+  .introduction-text {
+    width: 100%;
+    padding: 0;
+    max-width: 100%;
+  }
+
+  #latest-works {
+    flex-direction: column;
+    padding: 50px 20px;
+  }
+
+  .left-project,
+  .right-project {
+    width: 100%;
+  }
+
+  .project-img-2,
+  .project-img-3 {
+    width: 100% !important;
+    height: auto !important;
+    left: 0 !important;
+    transform: none !important;
+  }
+
+  #footer {
+    flex-direction: column;
+    padding: 50px 20px;
+    height: auto;
+  }
+
+  .footer-left,
+  .footer-right {
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  .email-form {
+    width: 100%;
+    padding: 40px 20px;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+  h2 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .navbar-menu {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .social-media {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .design-card {
+    width: 100%;
+  }
+
+  .testimonial-title {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .single-profile-card {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .footer-menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+
+  .footer-menu li {
+    padding: 5px 10px;
+  }
 }
