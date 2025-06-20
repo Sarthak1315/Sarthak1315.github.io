@@ -1023,7 +1023,7 @@ body::selection {
 /* ---------- RESPONSIVE STYLES ---------- */
 @media (max-width: 1700px) {
 .mobile-menu-toggle {
-    display: none !important; 
+    display: none; 
   }
 }
 /* General adjustments for larger screens (laptops/desktops up to 1024px) */
@@ -1049,7 +1049,7 @@ body::selection {
     max-width: 70%; /* Allow testimonial title to take more width */
   }
 .mobile-menu-toggle {
-    display: none !important; 
+    display: none ; 
   }
 }
 
@@ -1319,7 +1319,7 @@ body::selection {
   }
 
   .mobile-menu-toggle {
-    display: block !important; /* Ensure it's displayed on mobile */
+    display: block; /* Ensure it's displayed on mobile */
     margin-right: 0;
   }
  
@@ -1406,7 +1406,7 @@ body::selection {
     padding: 4px 8px;
   }
   .mobile-menu-toggle {
-    display: block !important; /* Ensure it's displayed on mobile */
+    display: block; /* Ensure it's displayed on mobile */
     margin-right: 0;
   }
   
