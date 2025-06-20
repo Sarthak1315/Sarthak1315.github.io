@@ -23,6 +23,7 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <meta name="theme-color" content="#fff" />
+    <!-- IMPORTANT: This viewport meta tag is crucial for responsiveness -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sarthak Patel</title>
     <script src="https://kit.fontawesome.com/e674bba739.js" crossorigin="anonymous"></script>
@@ -39,16 +40,21 @@
                 Patel
             </h3>
         </div>
+        <div class="mobile-menu-toggle" onclick="toggleMenu()">
+            <i class="fa fa-bars"></i>
+        </div>
         <div id="n_div">
-            <ul class="navbar-menu">
-                <li><a class="active" href="#">&lt; Home &gt;</a></li>
-                <li><a class="" href="#introduction">Service</a></li>
-                <li><a class="" href="#techno">Technology</a></li>
-                <li><a class="" href="./certificates.html">Certificates</a></li>
-                <li><a class="" href="https://myai.sarthakpatel1315.workers.dev">Project</a></li>
-                <li><a class="" href="#latest-works">Works</a></li>
-                <li><a class="" href="#footer">Contacts</a></li>
-            </ul>
+            <div id="mobile-nav">
+                <ul class="navbar-menu">
+                    <li><a class="active" href="#">&lt; Home &gt;</a></li>
+                    <li><a href="#introduction">Service</a></li>
+                    <li><a href="#techno">Technology</a></li>
+                    <li><a href="./certificates.html">Certificates</a></li>
+                    <li><a href="https://myai.sarthakpatel.tech">Project</a></li>
+                    <li><a href="#latest-works">Works</a></li>
+                    <li><a href="#footer">Contacts</a></li>
+                </ul>
+            </div>
         </div>
         <div>
             <ul class="social-media">
@@ -73,14 +79,11 @@
                 <p>Web Developer</p>
                 <p>Backend Developer</p>
                 <p>Cybersecurity Analyst</p>
-
             </div>
             <div class="body-title">
                 <h1>Crafting Digital Dreams:<br>Coding,Security, and Beyond</h1>
                 <p>I design and code beautifully simple things,<br>and I love what I do.</p>
                 <a href="#footer">LET'S CHAT!</a>
-         
-                
             </div>
             <div class="body-tail">
                 <h1>1</h1>
@@ -155,33 +158,30 @@
             <p>technology/Language Knowledge</p>
         </div>
         <br>
-        <div class="testimonial-title">
-            <p>Languages</p>
-        </div>
-        <div class="">
-                    <span style="--i:1;"><img src="assets/SVGIcons/html-5.svg" class="t_img"></span>
-                    <span style="--i:2;"><img src="assets/SVGIcons/css3.svg" class="t_img"></span>
-                    <span style="--i:3;"><img src="assets/SVGIcons/javascript.svg" class="t_img"></span>
-                    <span style="--i:4;"><img src="assets/SVGIcons/python.svg" class="t_img"></span>
-                    <span style="--i:5;"><img src="assets/SVGIcons/java.svg" class="t_img"></span>
-                    <span style="--i:6;"><img src="assets/SVGIcons/php-icon.svg" class="t_img"></span>
-                    <span style="--i:7;"><img src="assets/SVGIcons/C_Programming_Language.svg" class="t_img"></span>
-                    <span style="--i:8;"><img src="assets/SVGIcons/Logo_C_sharp.svg" class="t_img"></span>
+        <div class="technology-grid">
+            <span style="--i:1;"><img src="assets/SVGIcons/html-5.svg" class="t_img"></span>
+            <span style="--i:2;"><img src="assets/SVGIcons/css3.svg" class="t_img"></span>
+            <span style="--i:3;"><img src="assets/SVGIcons/javascript.svg" class="t_img"></span>
+            <span style="--i:4;"><img src="assets/SVGIcons/python.svg" class="t_img"></span>
+            <span style="--i:5;"><img src="assets/SVGIcons/java.svg" class="t_img"></span>
+            <span style="--i:6;"><img src="assets/SVGIcons/php-icon.svg" class="t_img"></span>
+            <span style="--i:7;"><img src="assets/SVGIcons/C_Programming_Language.svg" class="t_img"></span>
+            <span style="--i:8;"><img src="assets/SVGIcons/Logo_C_sharp.svg" class="t_img"></span>
         </div><br>
         <div class="testimonial-title">
             <p>Framework</p>
         </div>
-        <div class="">
-                    <span style="--i:9;"><img src="assets/SVGIcons/aspnet-svgrepo-com.svg" class="t_img"></span>
-                    <span style="--i:10;"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" class="t_img"></span>
-                    <span style="--i:7;"><img src="https://storage.googleapis.com/myuploads-ad647.appspot.com/icons8-express-js.svg" class="t_img"></span>
-                    <span style="--i:7;"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" class="t_img"/></span>
-                    <span style="--i:7;"><img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg"class="t_img"/></span>
+        <div class="technology-grid">
+            <span style="--i:9;"><img src="assets/SVGIcons/aspnet-svgrepo-com.svg" class="t_img"></span>
+            <span style="--i:10;"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" class="t_img"></span>
+            <span style="--i:7;"><img src="https://storage.googleapis.com/myuploads-ad647.appspot.com/icons8-express-js.svg" class="t_img"></span>
+            <span style="--i:7;"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" class="t_img"/></span>
+            <span style="--i:7;"><img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg"class="t_img"/></span>
         </div><br>
         <div class="testimonial-title">
             <p>Database</p>
         </div>
-        <div class="">
+        <div class="technology-grid">
             <span style="--i:11;"><img src="assets/SVGIcons/phpmyadmin-ar21.svg" class="t_img"></span>
             <span style="--i:12;"><img src="assets/SVGIcons/oracle-ar21.svg" class="t_img"></span>
             <span style="--i:13;"><img src="assets/SVGIcons/MySQL-Dark.svg" class="t_img"></span>
@@ -190,26 +190,23 @@
         <div class="testimonial-title">
             <p>Cloud</p>
         </div>
-        <div class="">
+        <div class="technology-grid">
             <span style="--i:15;"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Google_Cloud_logo.svg" class="t_img"></span>
             <span style="--i:16;"><img src="assets/SVGIcons/Firebase-Dark.svg" class="t_img"></span>
             <span style="--i:17;"><img src="assets/SVGIcons/cloudflare-svgrepo-com.svg" class="t_img"></span>
             <span style="--i:18;"><img src="assets/SVGIcons/Github-Dark.svg" class="t_img"></span>    
             <span style="--i:19;"><img src="assets/SVGIcons/oracle-ar21.svg" class="t_img"></span>
             <span style="--i:20;"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" class="t_img"></span>
-            
         </div><br>
         <div class="testimonial-title">
             <p>Other</p>
         </div>
-        <div class="">
+        <div class="technology-grid">
             <span style="--i:21;"><img src="assets/SVGIcons/adobe-illustrator.svg" class="t_img"></span>
             <span style="--i:22;"><img src="assets/SVGIcons/adobe-photoshop.svg" class="t_img"></span>
             <span style="--i:23;"><img src="assets/SVGIcons/canva-icon.svg" class="t_img"></span>
             <span style="--i:23;"><img src="assets/SVGIcons/figma.svg" class="t_img"></span>
-            
         </div><br><br>
-                
     </section>
     <section id="achievement">
         <div class="testimonial-title">
@@ -217,11 +214,9 @@
             <p>Certificates</p>
         </div>
         <br>
-        <div class="">
-            <p align="left" style="text-decoration: none;">
-            <img src="https://storage.googleapis.com/myuploads-ad647.appspot.com/Certificate_jpg/introduction-to-cybersecurity-tools-cyber-attacks.png" alt="cybersecurity-roles-processes-operating-system-security" width="250" height="250"/>&ensp;
-            <img src="https://storage.googleapis.com/myuploads-ad647.appspot.com/Certificate_jpg/cybersecurity-roles-processes-operating-system-security.png" alt="cybersecurity-roles-processes-operating-system-security" width="250" height="250"/>&ensp;
-            </p>
+        <div class="certificates-container">
+            <img src="https://storage.googleapis.com/myuploads-ad647.appspot.com/Certificate_jpg/introduction-to-cybersecurity-tools-cyber-attacks.png" alt="cybersecurity-roles-processes-operating-system-security" />
+            <img src="https://storage.googleapis.com/myuploads-ad647.appspot.com/Certificate_jpg/cybersecurity-roles-processes-operating-system-security.png" alt="cybersecurity-roles-processes-operating-system-security" />
             <ul>
                 <li><a href="https://coursera.org/share/e8dd004130f04f0246db18396139324a" class="link">Introduction to Cybersecurity Tools & Cyber Attacks (IBM) </a></li>
                 <li><a href="https://www.hackerrank.com/certificates/c0f37f3be8f3" class="link">JAVA</a></li>

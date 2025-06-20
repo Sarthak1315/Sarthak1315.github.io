@@ -72,18 +72,22 @@ single_profile_card.forEach((btn, index) => {
     });
 });
 
+// Function to toggle the mobile menu's visibility
+function toggleMenu() {
+    const menu = document.getElementById('mobile-nav');
+    // Toggles the 'show' class which controls display property in CSS
+    menu.classList.toggle('show');
+}
 
-// const menu = document.querySelector('#header #n_div ui');
-
-// const navItems = menu.querySelectorAll('li');
-// navItems.forEach(item => {
-//   const link = item.querySelector('a');
-//   ink.addEventListener('click', () => {
-//     link.classList.add("active");
-//   });
-// });
-
-
-list.addEventListener('click', handleClick);
-
+// Event listener for the navigation list to close mobile menu when a link is clicked
+list.addEventListener('click', (e) => {
+    handleClick(e); // Existing handleClick logic
+    // If the clicked element is a link, close the mobile menu
+    if (e.target.matches('a')) {
+        const menu = document.getElementById('mobile-nav');
+        if (menu.classList.contains('show')) {
+            menu.classList.remove('show');
+        }
+    }
+});
 
