@@ -319,14 +319,13 @@ body::selection {
   z-index: 9;
   box-shadow: 0 0 20px #00000080;
 }
-
-.hoodie-guy {
-  position: absolute;
-  background: url(assets/Hoodie-guy.png);
-  top: 68px;
-  height: 550px;
-  width: 550px;
-  background-size: cover;
+.hoodie-guy{
+    position: absolute;
+    background: url(assets/s2.png);
+    top: 0px;
+    height: 610px;
+    width: 450px;
+    background-size: cover;
 }
 
 .circle {
