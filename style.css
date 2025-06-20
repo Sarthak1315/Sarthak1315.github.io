@@ -1023,7 +1023,7 @@ body::selection {
 /* ---------- RESPONSIVE STYLES ---------- */
 @media (max-width: 1700px) {
 .mobile-menu-toggle {
-    display: none; 
+    display: none !important; 
   }
 }
 /* General adjustments for larger screens (laptops/desktops up to 1024px) */
@@ -1049,7 +1049,7 @@ body::selection {
     max-width: 70%; /* Allow testimonial title to take more width */
   }
 .mobile-menu-toggle {
-    display: none ; 
+    display: none !important; 
   }
 }
 
@@ -1322,7 +1322,6 @@ body::selection {
     display: block; /* Ensure it's displayed on mobile */
     margin-right: 0;
   }
- 
 
   #mobile-nav {
     display: none;
@@ -1341,7 +1340,7 @@ body::selection {
   }
 
   #content-body {
-    padding: 20px 15px; /* Reduce padding for smaller screens */
+    padding: 20px 15px 0px 15px; /* Reduce padding for smaller screens */
   }
 
   .developer-intro p {
@@ -1387,17 +1386,18 @@ body::selection {
     font-size: 20px; /* Smaller title in header */
   }
 
-  .background-circle {
-    width: 220px; /* Smallest circle */
-    height: 220px;
-  }
+      .background-circle {
+        width: 220px;
+        height: 220px;
+        margin: auto;
+}
 
   .hoodie-guy {
     height: 260px; /* Smallest hoodie guy */
     width: 190px;
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Use transform to truly center */
-    top: -10px; /* Adjust top position */
+    top: -5px; /* Adjust top position */
   }
 
   .developer-intro p {
@@ -1405,9 +1405,4 @@ body::selection {
     font-size: 11px;
     padding: 4px 8px;
   }
-  .mobile-menu-toggle {
-    display: block; /* Ensure it's displayed on mobile */
-    margin-right: 0;
-  }
-  
 }
