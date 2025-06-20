@@ -1319,9 +1319,10 @@ body::selection {
   }
 
   .mobile-menu-toggle {
-    display: block; /* Ensure it's displayed on mobile */
+    display: block !important; /* Ensure it's displayed on mobile */
     margin-right: 0;
   }
+ 
 
   #mobile-nav {
     display: none;
@@ -1404,4 +1405,9 @@ body::selection {
     font-size: 11px;
     padding: 4px 8px;
   }
+  .mobile-menu-toggle {
+    display: block !important; /* Ensure it's displayed on mobile */
+    margin-right: 0;
+  }
+  
 }
