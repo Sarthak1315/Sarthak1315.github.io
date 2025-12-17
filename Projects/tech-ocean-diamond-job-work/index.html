@@ -1,1 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech Ocean – Diamond Job Work Management</title>
+    <meta name="description" content="Tech Ocean – Diamond Job Work Management is a desktop ERP solution for diamond job work, salary calculation, billing, and inventory tracking." />
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card: #111827;
+            --text: #e5e7eb;
+            --muted: #9ca3af;
+            --accent: #22c55e;
+        }
+        * {
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+        }
+        body {
+            margin: 0;
+            background: linear-gradient(180deg, #020617, var(--bg));
+            color: var(--text);
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 48px 24px;
+        }
+        header {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            margin-bottom: 48px;
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(34, 197, 94, 0.15);
+            color: var(--accent);
+            padding: 6px 12px;
+            border-radius: 999px;
+            font-size: 13px;
+            width: fit-content;
+        }
+        h1 {
+            font-size: 42px;
+            line-height: 1.2;
+            margin: 0;
+        }
+        p.lead {
+            font-size: 18px;
+            color: var(--muted);
+            max-width: 720px;
+        }
+        section {
+            margin-bottom: 56px;
+        }
+        h2 {
+            font-size: 28px;
+            margin-bottom: 16px;
+        }
+        .card {
+            background: rgba(17, 24, 39, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 16px;
+            padding: 24px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+        }
+        .beta {
+            border-left: 4px solid var(--accent);
+            background: rgba(34, 197, 94, 0.08);
+        }
+        footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 24px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <header>
+            <span class="badge">Desktop ERP · Diamond Industry</span>
+            <h1>Tech Ocean – Diamond Job Work Management</h1>
+            <p class="lead">
+                A desktop-based ERP solution designed specifically for the diamond industry to manage job work,
+                inventory movement, salary calculation, billing, and financial records with accuracy and control.
+            </p>
+        </header>
 
+        <section>
+            <h2>What This Software Solves</h2>
+            <div class="card">
+                <ul>
+                    <li>Accurate <strong>Job In / Job Out</strong> tracking using Jangad numbers</li>
+                    <li>Precise handling of <strong>pieces (Pic)</strong> and <strong>carat weight (Ct)</strong></li>
+                    <li>Automated <strong>salary calculation</strong> based on actual work output</li>
+                    <li>Clear visibility of <strong>stock movement</strong> and pending jobs</li>
+                    <li>Professional <strong>billing, invoices, and reports</strong></li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Key Features</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Job Work Management</h3>
+                    <p>Manage job issue, job return, and work stages with full traceability.</p>
+                </div>
+                <div class="card">
+                    <h3>Salary & Accounts</h3>
+                    <p>Calculate salaries from work output and maintain income & expense records.</p>
+                </div>
+                <div class="card">
+                    <h3>Billing & Reports</h3>
+                    <p>Generate GST-ready bills, salary slips, and operational reports in PDF.</p>
+                </div>
+                <div class="card">
+                    <h3>Import & Export</h3>
+                    <p>Handle high-volume data using structured CSV import and export utilities.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Who This Is For</h2>
+            <div class="card">
+                <ul>
+                    <li>Diamond job work units</li>
+                    <li>Small to mid-size diamond manufacturers</li>
+                    <li>Factory supervisors and accounting teams</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Beta Status</h2>
+            <div class="card beta">
+                <p>
+                    This product is currently in <strong>limited beta</strong>. Features and workflows may evolve
+                    based on feedback from real industry users. The beta phase focuses on correctness, usability,
+                    and operational validation.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Contact</h2>
+            <div class="card">
+                <p>
+                    Interested in beta access or learning more?<br />
+                    Reach out via LinkedIn or email.
+                </p>
+                <p>
+                    <strong>Developer:</strong> Sarthak Patel<br />
+                    <strong>Email:</strong> <a href="mailto:sarthakpatel1315@gmail.com">sarthakpatel1315@gmail.com</a><br />
+                    <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sarthak-patel-sp1315/" target="_blank">View Profile</a>
+                </p>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2025 Tech Ocean. All rights reserved.</p>
+        </footer>
+    </main>
+</body>
+</html>
