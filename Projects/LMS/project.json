@@ -1,0 +1,21 @@
+{
+    "title": "Lead Management System (LMS)",
+    "description": "Enterprise multi-tenant CRM solution with advanced lead tracking, intelligent follow-ups, and comprehensive analytics built on ASP.NET Core 8",
+    "technologies": [
+        "ASP.NET Core 8",
+        "Entity Framework",
+        "PostgreSQL",
+        "Bootstrap 5"
+    ],
+    "image": [
+        "./Projects/LMS/1.png",
+        "./Projects/LMS/4.png",
+        "./Projects/LMS/5.png",
+        "./Projects/LMS/7.png"
+    ],
+    "liveUrl": "./Projects/LMS/index.html",
+    "githubUrl": "",
+    "category": "backend",
+    "featured": true,
+    "order": 2
+}

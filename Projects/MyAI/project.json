@@ -1,0 +1,18 @@
+{
+    "title": "MyAI",
+    "description": "AI-powered chat application using Cloudflare Workers and Llama 2 model for intelligent conversations",
+    "technologies": [
+        "Cloudflare Workers",
+        "JavaScript",
+        "Llama 2"
+    ],
+    "image": "https://storage.googleapis.com/myuploads-ad647.appspot.com/Projects/myai.png",
+    "liveUrl": "https://myai.sarthakpatel1315.workers.dev/",
+    "githubUrl": "https://github.com/Sarthak1315/",
+    "category": [
+        "frontend",
+        "ai"
+    ],
+    "featured": true,
+    "order": 3
+}

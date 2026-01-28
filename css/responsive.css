@@ -1,0 +1,460 @@
+/* ========================================
+   RESPONSIVE BREAKPOINTS
+   - Mobile: up to 480px
+   - Small Tablet: 481px - 768px
+   - Tablet: 769px - 1024px
+   - Desktop: 1025px+
+======================================== */
+
+/* ========================================
+   LARGE TABLETS & SMALL DESKTOPS
+======================================== */
+@media (max-width: 1024px) {
+    :root {
+        --text-6xl: 3.5rem;
+        --text-5xl: 2.5rem;
+        --text-4xl: 2rem;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-10);
+    }
+
+    .about-image {
+        order: -1;
+    }
+
+    .image-wrapper {
+        width: 250px;
+        height: 300px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: var(--space-10);
+    }
+
+    .timeline-line {
+        left: 25px;
+    }
+
+    .timeline-item {
+        padding-right: 0 !important;
+        padding-left: 70px !important;
+        justify-content: flex-start !important;
+    }
+
+    .timeline-marker {
+        left: 0;
+        transform: none;
+    }
+}
+
+/* ========================================
+   TABLETS
+======================================== */
+@media (max-width: 768px) {
+    :root {
+        --space-24: 4rem;
+        --space-20: 3.5rem;
+        --space-16: 3rem;
+    }
+
+    /* Navigation Mobile */
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--bg-primary);
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: var(--space-10);
+        gap: var(--space-2);
+        transform: translateX(100%);
+        transition: transform var(--transition-base);
+        z-index: var(--z-fixed);
+    }
+
+    .nav-menu.active {
+        transform: translateX(0);
+    }
+
+    .nav-link {
+        font-size: var(--text-lg);
+        padding: var(--space-4);
+        width: 100%;
+        text-align: center;
+        border-radius: var(--radius-lg);
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        background: var(--glass-bg);
+    }
+
+    .nav-link::after {
+        display: none;
+    }
+
+    /* Hero */
+    .hero-roles {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .role-tag {
+        width: fit-content;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-cta .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    /* About Stats */
+    .about-stats {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--space-6);
+    }
+
+    .stat-item {
+        flex: 0 0 calc(50% - var(--space-3));
+    }
+
+    /* Skills */
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+
+    .skill-card {
+        padding: var(--space-4);
+    }
+
+    .skill-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .skill-icon img {
+        width: 32px;
+        height: 32px;
+    }
+
+    /* Projects */
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Blog */
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        justify-content: center;
+    }
+}
+
+/* ========================================
+   SMALL TABLETS & LARGE PHONES
+======================================== */
+@media (max-width: 600px) {
+    :root {
+        --text-6xl: 2.5rem;
+        --text-5xl: 2rem;
+        --text-4xl: 1.75rem;
+        --text-3xl: 1.5rem;
+        --space-24: 3.5rem;
+        --space-20: 3rem;
+    }
+
+    .section {
+        padding: var(--space-16) var(--space-4);
+    }
+
+    .section-header {
+        margin-bottom: var(--space-10);
+    }
+
+    /* Hero adjustments */
+    .hero {
+        padding: var(--space-16) var(--space-4);
+    }
+
+    .hero-greeting {
+        font-size: var(--text-base);
+    }
+
+    .hero-description {
+        font-size: var(--text-base);
+    }
+
+    .scroll-indicator {
+        display: none;
+    }
+
+    /* About */
+    .image-wrapper {
+        width: 200px;
+        height: 250px;
+    }
+
+    .about-heading {
+        font-size: var(--text-xl);
+    }
+
+    /* Timeline */
+    .timeline-item {
+        padding-left: 55px !important;
+    }
+
+    .timeline-marker {
+        width: 40px;
+        height: 40px;
+    }
+
+    .timeline-marker svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .timeline-content {
+        padding: var(--space-4);
+    }
+
+    .timeline-title {
+        font-size: var(--text-base);
+    }
+
+    /* Contact */
+    .contact-form {
+        padding: var(--space-5);
+    }
+
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--space-2);
+    }
+
+    /* Back to top */
+    .back-to-top {
+        width: 40px;
+        height: 40px;
+        bottom: var(--space-4);
+        right: var(--space-4);
+    }
+}
+
+/* ========================================
+   MOBILE PHONES
+======================================== */
+@media (max-width: 480px) {
+    :root {
+        --text-6xl: 2rem;
+        --text-5xl: 1.75rem;
+        --text-4xl: 1.5rem;
+        --text-3xl: 1.25rem;
+    }
+
+    body {
+        font-size: 0.9375rem;
+    }
+
+    .nav-container {
+        padding: 0 var(--space-4);
+    }
+
+    /* Hero */
+    .hero-name {
+        font-size: clamp(2rem, 10vw, 2.5rem);
+    }
+
+    .role-tag {
+        font-size: var(--text-xs);
+        padding: var(--space-1) var(--space-3);
+    }
+
+    .hero-social {
+        gap: var(--space-3);
+    }
+
+    .social-link {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* About Stats */
+    .stat-item {
+        flex: 0 0 100%;
+    }
+
+    .stat-number {
+        font-size: var(--text-3xl);
+    }
+
+    /* Skills */
+    .skill-category {
+        padding: var(--space-5);
+    }
+
+    .category-title {
+        font-size: var(--text-lg);
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-3);
+    }
+
+    .skill-card {
+        padding: var(--space-3);
+    }
+
+    .skill-name {
+        font-size: var(--text-xs);
+    }
+
+    /* Projects */
+    .projects-filter {
+        gap: var(--space-2);
+    }
+
+    .filter-btn {
+        padding: var(--space-2) var(--space-3);
+        font-size: var(--text-xs);
+    }
+
+    .project-image {
+        height: 180px;
+    }
+
+    .project-content {
+        padding: var(--space-4);
+    }
+
+    .project-title {
+        font-size: var(--text-lg);
+    }
+
+    /* Blog */
+    .blog-image {
+        height: 160px;
+    }
+
+    .blog-content {
+        padding: var(--space-4);
+    }
+
+    /* Footer */
+    .footer {
+        padding: var(--space-8) var(--space-4) var(--space-4);
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: var(--space-3);
+    }
+}
+
+/* ========================================
+   EXTRA SMALL PHONES
+======================================== */
+@media (max-width: 360px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-cta .btn {
+        font-size: var(--text-xs);
+        padding: var(--space-3) var(--space-4);
+    }
+
+    .btn svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+/* ========================================
+   LANDSCAPE PHONES
+======================================== */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding: var(--space-16) var(--space-6);
+    }
+
+    .hero-roles {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .scroll-indicator {
+        display: none;
+    }
+
+    .nav-menu {
+        top: 60px;
+        padding: var(--space-4);
+    }
+}
+
+/* ========================================
+   PRINT STYLES
+======================================== */
+@media print {
+
+    .loader,
+    .cursor,
+    .cursor-follower,
+    .navbar,
+    .back-to-top,
+    .hero-bg,
+    .scroll-indicator {
+        display: none !important;
+    }
+
+    body {
+        background: white;
+        color: black;
+    }
+
+    .section {
+        padding: 20px 0;
+        page-break-inside: avoid;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+}
+
+/* ========================================
+   HIGH DPI / RETINA DISPLAYS
+======================================== */
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    .skill-icon img {
+        image-rendering: -webkit-optimize-contrast;
+    }
+}

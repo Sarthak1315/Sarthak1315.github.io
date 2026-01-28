@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post | Sarthak Patel</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .blog-detail-section {
+            padding-top: 120px;
+            padding-bottom: 80px;
+            min-height: 100vh;
+        }
+
+        .blog-header {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            text-align: center;
+        }
+
+        .blog-title-large {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+
+        .blog-meta-detail {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .blog-hero-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: var(--radius-xl);
+            margin-bottom: 60px;
+        }
+
+        .blog-body {
+            max-width: 800px;
+            margin: 0 auto;
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .blog-body h2 {
+            color: var(--text-primary);
+            font-size: 2rem;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        .blog-body h3 {
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .blog-body p {
+            margin-bottom: 20px;
+        }
+
+        .blog-body ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        .blog-body li {
+            margin-bottom: 10px;
+        }
+
+        .blog-body pre {
+            background: var(--bg-card);
+            padding: 20px;
+            border-radius: var(--radius-lg);
+            overflow-x: auto;
+            border: 1px solid var(--glass-border);
+            margin: 30px 0;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 40px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-btn:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-text">&lt;Sarthak Patel/&gt;</span>
+            </a>
+            <div class="nav-toggle" id="nav-toggle">
+                <i data-lucide="menu"></i>
+            </div>
+        </div>
+    </nav>
+
+    <main class="blog-detail-section">
+        <div class="container">
+            <a href="index.html#blog" class="back-btn">
+                <i data-lucide="arrow-left"></i> Back to Articles
+            </a>
+
+            <div id="blog-content-loader" style="text-align: center;">
+                <div class="loader-spinner"></div>
+                <p>Loading article...</p>
+            </div>
+
+            <article id="blog-article" style="display: none;">
+                <header class="blog-header">
+                    <div class="blog-meta-detail">
+                        <span id="blog-date"></span>
+                        <span>•</span>
+                        <span id="blog-category" style="color: var(--primary);"></span>
+                    </div>
+                    <h1 class="blog-title-large" id="blog-title"></h1>
+                </header>
+
+                <img src="" alt="Blog Cover" class="blog-hero-image" id="blog-image">
+
+                <div class="blog-body" id="blog-body-content">
+                    <!-- Content injected here -->
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>&copy; 2026 Sarthak Patel. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const slug = urlParams.get('id');
+            const loader = document.getElementById('blog-content-loader');
+            const article = document.getElementById('blog-article');
+
+            if (!slug) {
+                loader.innerHTML = '<p class="error">Article not found.</p>';
+                return;
+            }
+
+            try {
+                // Fetch blog details
+                const response = await fetch(`./blogs/${slug}/blog.json`);
+                if (!response.ok) throw new Error('Blog not found');
+
+                const blog = await response.json();
+
+                // Populate UI
+                document.title = `${blog.title} | Sarthak Patel`;
+                document.getElementById('blog-title').textContent = blog.title;
+                document.getElementById('blog-date').textContent = blog.date;
+                document.getElementById('blog-category').textContent = blog.category;
+                document.getElementById('blog-image').src = blog.image;
+                document.getElementById('blog-body-content').innerHTML = blog.content;
+
+                // Show article
+                loader.style.display = 'none';
+                article.style.display = 'block';
+
+                lucide.createIcons();
+
+            } catch (error) {
+                console.error(error);
+                loader.innerHTML = '<p class="error">Failed to load article. Please try again later.</p>';
+            }
+        });
+    </script>
+</body>
+
+</html>

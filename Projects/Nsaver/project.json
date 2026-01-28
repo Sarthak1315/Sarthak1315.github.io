@@ -1,0 +1,19 @@
+{
+    "title": "Nsaver",
+    "description": "Note-taking application with cloud sync and markdown support for organized documentation",
+    "technologies": [
+        "PHP",
+        "JavaScript",
+        "MySQL"
+    ],
+    "image": "assets/Projects/p2.png",
+    "liveUrl": "https://github.com/Sarthak1315/Note-Saver",
+    "githubUrl": "https://github.com/Sarthak1315/Note-Saver",
+    "category": [
+        "frontend",
+        "backend",
+        "fullstack"
+    ],
+    "featured": true,
+    "order": 5
+}

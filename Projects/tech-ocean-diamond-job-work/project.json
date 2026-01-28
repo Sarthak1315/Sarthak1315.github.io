@@ -1,0 +1,24 @@
+{
+    "title": "Tech Ocean - Diamond Job Work",
+    "description": "Diamond job work management system for tracking diamond cutting, polishing, and job work operations with inventory management",
+    "technologies": [
+        "C#",
+        "WinForms",
+        "SQLite",
+        "RDLC Reports"
+    ],
+    "image": [
+        "./Projects/tech-ocean-diamond-job-work/1.png",
+        "./Projects/tech-ocean-diamond-job-work/2.png",
+        "./Projects/tech-ocean-diamond-job-work/12.png",
+        "./Projects/tech-ocean-diamond-job-work/13.png"
+    ],
+    "liveUrl": "./Projects/tech-ocean-diamond-job-work/index.html",
+    "githubUrl": "",
+    "category": [
+        "backend",
+        "fullstack"
+    ],
+    "featured": true,
+    "order": 1
+}

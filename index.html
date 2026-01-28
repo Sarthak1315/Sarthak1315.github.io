@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Sarthak Patel - Software Developer, Cybersecurity Analyst, Backend Developer & AI Enthusiast. Portfolio showcasing projects and skills.">
+    <meta name="keywords" content="Sarthak Patel, Software Developer, Backend Developer, Full Stack, Portfolio">
+    <meta name="author" content="Sarthak Patel">
+
+    <title>Sarthak Patel | Software Developer & AI Enthusiast</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./assets/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    <link rel="stylesheet" href="./css/certificates.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+</head>
+
+<body>
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <span class="loader-text">Loading<span class="dots"></span></span>
+        </div>
+    </div>
+
+    <!-- Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-text">&lt;Sarthak Patel/&gt;</span>
+            </a>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#timeline" class="nav-link">Timeline</a></li>
+                <li class="nav-item"><a href="#certificates" class="nav-link">Certificates</a></li>
+                <li class="nav-item"><a href="#blog" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <div class="hero-grid"></div>
+            <div class="particles" id="particles"></div>
+        </div>
+
+        <div class="hero-content">
+            <p class="hero-greeting animate-fade-up">Hello, I'm</p>
+            <h1 class="hero-name animate-fade-up delay-1">Sarthak Patel</h1>
+
+            <div class="hero-roles animate-fade-up delay-2">
+                <span class="role-tag">Software Developer</span>
+                <span class="role-tag">Cybersecurity Analyst</span>
+                <span class="role-tag">Backend Developer</span>
+                <span class="role-tag">AI Enthusiast</span>
+            </div>
+
+            <p class="hero-description animate-fade-up delay-3">
+                Building robust, scalable solutions with passion for clean code and innovative technology.
+            </p>
+
+            <div class="hero-cta animate-fade-up delay-4">
+                <a href="#projects" class="btn btn-primary">
+                    <i data-lucide="folder-open"></i>
+                    View Projects
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <i data-lucide="mail"></i>
+                    Get in Touch
+                </a>
+            </div>
+
+            <div class="hero-social animate-fade-up delay-5">
+                <a href="https://github.com/Sarthak1315/" target="_blank" rel="noopener" class="social-link"
+                    aria-label="GitHub">
+                    <i data-lucide="github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/sarthak-patel-sp1315/" target="_blank" rel="noopener"
+                    class="social-link" aria-label="LinkedIn">
+                    <i data-lucide="linkedin"></i>
+                </a>
+                <a href="https://www.instagram.com/___sarthak_13/" target="_blank" rel="noopener" class="social-link"
+                    aria-label="Instagram">
+                    <i data-lucide="instagram"></i>
+                </a>
+                <a href="mailto:work.sarthakpatel@gmail.com" class="social-link" aria-label="Email">
+                    <i data-lucide="mail"></i>
+                </a>
+            </div>
+        </div>
+
+        <a href="#about" class="scroll-indicator">
+            <span class="scroll-text">Scroll Down</span>
+            <i data-lucide="chevrons-down"></i>
+        </a>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">About Me</span>
+                <h2 class="section-title">Who I Am</h2>
+            </div>
+
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <img src="./assets/pro1.png" alt="Sarthak Patel" class="profile-img">
+                        <div class="image-border"></div>
+                        <div class="image-dots"></div>
+                    </div>
+                </div>
+
+                <div class="about-text">
+                    <h3 class="about-heading">A passionate developer crafting digital experiences</h3>
+                    <p class="about-description">
+                        I'm a versatile software developer with expertise in building enterprise-grade applications and
+                        modern web solutions.
+                        My journey in tech spans across multiple domains including backend development, cybersecurity,
+                        and artificial intelligence.
+                    </p>
+                    <p class="about-description">
+                        I thrive on solving complex problems and transforming ideas into reality through clean,
+                        efficient code.
+                        Whether it's designing scalable architectures or implementing cutting-edge features, I bring
+                        dedication and innovation to every project.
+                    </p>
+
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="10" data-suffix="+">0</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="15" data-suffix="+">0</span>
+                            <span class="stat-label">Technologies</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="3" data-suffix="+">0</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                    </div>
+
+                    <a href="./assets/documents/resume.pdf" class="btn btn-primary" download>
+                        <i data-lucide="download"></i>
+                        Download Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">My Skills</span>
+                <h2 class="section-title">Technologies I Work With</h2>
+            </div>
+
+            <div class="skills-container">
+                <!-- Languages -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i data-lucide="code-2"></i>
+                        Languages
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-card" data-skill="C#">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
+                                    alt="C#">
+                            </div>
+                            <span class="skill-name">C#</span>
+                        </div>
+                        <div class="skill-card" data-skill="Python">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                                    alt="Python">
+                            </div>
+                            <span class="skill-name">Python</span>
+                        </div>
+                        <div class="skill-card" data-skill="PHP">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+                                    alt="PHP">
+                            </div>
+                            <span class="skill-name">PHP</span>
+                        </div>
+                        <div class="skill-card" data-skill="Java">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                                    alt="Java">
+                            </div>
+                            <span class="skill-name">Java</span>
+                        </div>
+                        <div class="skill-card" data-skill="C">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C">
+                            </div>
+                            <span class="skill-name">C</span>
+                        </div>
+                        <div class="skill-card" data-skill="JavaScript">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                                    alt="JavaScript">
+                            </div>
+                            <span class="skill-name">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frontend -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i data-lucide="palette"></i>
+                        Frontend
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-card" data-skill="HTML5">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                                    alt="HTML5">
+                            </div>
+                            <span class="skill-name">HTML5</span>
+                        </div>
+                        <div class="skill-card" data-skill="CSS3">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                                    alt="CSS3">
+                            </div>
+                            <span class="skill-name">CSS3</span>
+                        </div>
+                        <div class="skill-card" data-skill="Bootstrap">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                                    alt="Bootstrap">
+                            </div>
+                            <span class="skill-name">Bootstrap</span>
+                        </div>
+                        <div class="skill-card" data-skill="Tailwind CSS">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+                                    alt="Tailwind CSS">
+                            </div>
+                            <span class="skill-name">Tailwind CSS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend & Frameworks -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i data-lucide="server"></i>
+                        Backend & Frameworks
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-card" data-skill=".NET">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg"
+                                    alt=".NET">
+                            </div>
+                            <span class="skill-name">.NET</span>
+                        </div>
+                        <div class="skill-card" data-skill="Node.js">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                                    alt="Node.js">
+                            </div>
+                            <span class="skill-name">Node.js</span>
+                        </div>
+                        <div class="skill-card" data-skill="Express">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+                                    alt="Express">
+                            </div>
+                            <span class="skill-name">Express</span>
+                        </div>
+                        <div class="skill-card" data-skill="Shopify">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/shopify/shopify-original.svg"
+                                    alt="Shopify">
+                            </div>
+                            <span class="skill-name">Shopify</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Databases -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i data-lucide="database"></i>
+                        Databases
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-card" data-skill="PostgreSQL">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                                    alt="PostgreSQL">
+                            </div>
+                            <span class="skill-name">PostgreSQL</span>
+                        </div>
+                        <div class="skill-card" data-skill="MySQL">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                                    alt="MySQL">
+                            </div>
+                            <span class="skill-name">MySQL</span>
+                        </div>
+                        <div class="skill-card" data-skill="SQLite">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg"
+                                    alt="SQLite">
+                            </div>
+                            <span class="skill-name">SQLite</span>
+                        </div>
+                        <div class="skill-card" data-skill="MS SQL Server">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg"
+                                    alt="MS SQL Server">
+                            </div>
+                            <span class="skill-name">MS SQL</span>
+                        </div>
+                        <div class="skill-card" data-skill="MongoDB">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                                    alt="MongoDB">
+                            </div>
+                            <span class="skill-name">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & Platforms -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i data-lucide="wrench"></i>
+                        Tools & Platforms
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-card" data-skill="Git">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                                    alt="Git">
+                            </div>
+                            <span class="skill-name">Git</span>
+                        </div>
+                        <div class="skill-card" data-skill="GitHub">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                                    alt="GitHub">
+                            </div>
+                            <span class="skill-name">GitHub</span>
+                        </div>
+                        <div class="skill-card" data-skill="Firebase">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
+                                    alt="Firebase">
+                            </div>
+                            <span class="skill-name">Firebase</span>
+                        </div>
+                        <div class="skill-card" data-skill="Cloudflare">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cloudflare/cloudflare-original.svg"
+                                    alt="Cloudflare">
+                            </div>
+                            <span class="skill-name">Cloudflare</span>
+                        </div>
+                        <div class="skill-card" data-skill="Linux">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"
+                                    alt="Linux">
+                            </div>
+                            <span class="skill-name">Linux</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">My Work</span>
+                <h2 class="section-title">Featured Projects</h2>
+            </div>
+
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="frontend">Frontend</button>
+                <button class="filter-btn" data-filter="backend">Backend</button>
+                <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+            </div>
+
+            <div class="projects-grid" id="projects-grid" data-limit="3">
+                <!-- Projects will be loaded dynamically -->
+                <div class="loader-container">
+                    <div class="loader-spinner"></div>
+                </div>
+            </div>
+
+            <div class="view-all-container" style="text-align: center; margin-top: 40px;">
+                <a href="projects.html" class="btn btn-outline">
+                    View All Projects <i data-lucide="arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="section timeline" id="timeline">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">My Journey</span>
+                <h2 class="section-title">Experience & Education</h2>
+            </div>
+
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-marker">
+                        <i data-lucide="briefcase"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Apr 2025 - Present</span>
+                        <h3 class="timeline-title">Software Developer</h3>
+                        <p class="timeline-company">Tech Ocean · Self-employed</p>
+                        <p class="timeline-location">Surat, Gujarat, India · On-site</p>
+                        <p class="timeline-description">
+                            Developing enterprise solutions, CRM systems, and web applications for various clients.
+                            Specializing in .NET, Python, and full-stack development.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-marker">
+                        <i data-lucide="shopping-bag"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Jun 2025 - Oct 2025</span>
+                        <h3 class="timeline-title">Ecommerce Business Owner</h3>
+                        <p class="timeline-company">Self-employed</p>
+                        <p class="timeline-location">Surat, Gujarat, India · On-site</p>
+                        <p class="timeline-description">
+                            Managed e-commerce operations, product sourcing, and digital marketing strategies.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-marker">
+                        <i data-lucide="code-2"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Nov 2024 - Apr 2025</span>
+                        <h3 class="timeline-title">Software Development Trainee</h3>
+                        <p class="timeline-company">Desai Software - India</p>
+                        <p class="timeline-location">Surat, Gujarat, India · On-site</p>
+                        <p class="timeline-description">
+                            Specialized in C# .NET and ASP.NET development, gaining hands-on experience in building
+                            robust backend systems.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-marker">
+                        <i data-lucide="graduation-cap"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">May 2022 - May 2025</span>
+                        <h3 class="timeline-title">Bachelor of Science (IT)</h3>
+                        <p class="timeline-company">Shree Ramkrishna Institute of Computer Education & Applied Sciences
+                        </p>
+                        <p class="timeline-description">
+                            <strong>Grade:</strong> 9.23 CGPA<br>
+                            <strong>Activities:</strong> Cyber Security club at SRKI, SSIP at SCET.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section class="section certificates" id="certificates">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Achievements</span>
+                <h2 class="section-title">Certificates & Awards</h2>
+            </div>
+
+            <div class="certificates-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="google">Google</button>
+                <button class="filter-btn" data-filter="ibm">IBM</button>
+                <button class="filter-btn" data-filter="coursera">Coursera</button>
+                <button class="filter-btn" data-filter="hackerrank">HackerRank</button>
+                <button class="filter-btn" data-filter="srki">SRKI/SCET</button>
+                <button class="filter-btn" data-filter="svnit">SVNIT</button>
+                <button class="filter-btn" data-filter="deeplearning">DeepLearning.AI</button>
+                <button class="filter-btn" data-filter="language">Programming</button>
+                <button class="filter-btn" data-filter="other">Other</button>
+            </div>
+
+            <div class="certificates-grid" id="certificates-grid" data-limit="3">
+                <!-- Certificates will be loaded dynamically -->
+                <div class="certificates-loader">
+                    <div class="loader-spinner"></div>
+                    <p>Loading certificates...</p>
+                </div>
+            </div>
+
+            <div class="view-all-container" style="text-align: center; margin-top: 40px;">
+                <a href="certificates.html" class="btn btn-outline">
+                    View All Certificates <i data-lucide="arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificate Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close">
+            <i data-lucide="x"></i>
+        </button>
+        <div class="lightbox-content">
+            <img src="" alt="Certificate" id="lightbox-img">
+            <div class="lightbox-info">
+                <h3 class="lightbox-title" id="lightbox-title"></h3>
+                <p class="lightbox-issuer" id="lightbox-issuer"></p>
+            </div>
+        </div>
+        <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous">
+            <i data-lucide="chevron-left"></i>
+        </button>
+        <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next">
+            <i data-lucide="chevron-right"></i>
+        </button>
+    </div>
+
+    <!-- Blog Section -->
+    <section class="section blog" id="blog">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Latest Articles</span>
+                <h2 class="section-title">Blog & Insights</h2>
+            </div>
+
+            <div class="blog-grid" id="blog-grid">
+                <!-- Blog posts will be loaded dynamically -->
+                <div class="blog-loader">
+                    <div class="loader-spinner"></div>
+                    <p>Loading articles...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get in Touch</span>
+                <h2 class="section-title">Let's Work Together</h2>
+            </div>
+
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3 class="contact-heading">Contact Information</h3>
+                    <p class="contact-description">
+                        Feel free to reach out for collaborations, projects, or just to say hello!
+                    </p>
+
+                    <div class="contact-details">
+                        <a href="mailto:work.sarthakpatel@gmail.com" class="contact-item">
+                            <div class="contact-icon">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value">work.sarthakpatel@gmail.com</span>
+                            </div>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/sarthak-patel-sp1315/" target="_blank"
+                            class="contact-item">
+                            <div class="contact-icon">
+                                <i data-lucide="linkedin"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span class="contact-label">LinkedIn</span>
+                                <span class="contact-value">sarthak-patel-sp1315</span>
+                            </div>
+                        </a>
+
+                        <a href="https://github.com/Sarthak1315/" target="_blank" class="contact-item">
+                            <div class="contact-icon">
+                                <i data-lucide="github"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span class="contact-label">GitHub</span>
+                                <span class="contact-value">Sarthak1315</span>
+                            </div>
+                        </a>
+
+                        <a href="https://www.instagram.com/___sarthak_13/" target="_blank" class="contact-item">
+                            <div class="contact-icon">
+                                <i data-lucide="instagram"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span class="contact-label">Instagram</span>
+                                <span class="contact-value">___sarthak_13</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">Your Email</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="john@example.com"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject" class="form-label">Subject</label>
+                        <input type="text" id="subject" name="subject" class="form-input" placeholder="Project Inquiry"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea id="message" name="message" class="form-input form-textarea"
+                            placeholder="Tell me about your project..." rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i data-lucide="send"></i>
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#home" class="footer-logo">&lt;Sarthak Patel/&gt;</a>
+                    <p class="footer-tagline">Building the future, one line of code at a time.</p>
+                </div>
+
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+
+                <div class="footer-social">
+                    <a href="https://github.com/Sarthak1315/" target="_blank" class="social-link" aria-label="GitHub">
+                        <i data-lucide="github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/sarthak-patel-sp1315/" target="_blank" class="social-link"
+                        aria-label="LinkedIn">
+                        <i data-lucide="linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/___sarthak_13/" target="_blank" class="social-link"
+                        aria-label="Instagram">
+                        <i data-lucide="instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Sarthak Patel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i data-lucide="arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="./js/main.js"></script>
+    <script src="./js/animations.js"></script>
+    <script src="./js/projects.js"></script>
+    <script src="./js/certificates.js"></script>
+    <script src="./js/blogs.js"></script>
+</body>
+
+</html>

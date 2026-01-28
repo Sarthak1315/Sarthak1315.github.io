@@ -1,0 +1,19 @@
+{
+    "title": "MyUploads",
+    "description": "File upload and management system with secure storage and sharing capabilities",
+    "technologies": [
+        "PHP",
+        "JavaScript",
+        "MySQL"
+    ],
+    "image": "assets/Projects/p1.png",
+    "liveUrl": "https://github.com/Sarthak1315/MyUploads",
+    "githubUrl": "https://github.com/Sarthak1315/MyUploads",
+    "category": [
+        "frontend",
+        "backend",
+        "fullstack"
+    ],
+    "featured": true,
+    "order": 4
+}

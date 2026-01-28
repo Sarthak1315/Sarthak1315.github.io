@@ -1,0 +1,1442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Tech Ocean - Desktop ERP software for diamond manufacturing and job work. Accurate job tracking, automated salary calculation, and professional billing." />
+    <meta name="keywords"
+        content="diamond ERP, job work management, diamond manufacturing software, jangad tracking, diamond inventory" />
+    <title>Tech Ocean – Diamond Job Work Management ERP</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <!-- Magnific Popup for Image Modal -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+
+    <style>
+        :root {
+            --primary: #3b82f6;
+            --primary-dark: #2563eb;
+            --primary-light: #60a5fa;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --glass-card: rgba(15, 23, 42, 0.7);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --accent-cyan: #06b6d4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-main);
+            background: transparent;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* 3D Background Container */
+        #canvas-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: -1;
+            background: radial-gradient(ellipse at 50% 40%, #0f172a 0%, #020617 70%, #000000 100%);
+        }
+
+        /* --- UI Layout --- */
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 24px;
+            position: relative;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            padding: 20px 0;
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--glass-border);
+            background: rgba(2, 6, 23, 0.7);
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .logo-dot {
+            width: 10px;
+            height: 10px;
+            background: var(--primary);
+            border-radius: 50%;
+            box-shadow: 0 0 20px var(--primary);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                box-shadow: 0 0 20px var(--primary);
+            }
+
+            50% {
+                box-shadow: 0 0 30px var(--primary), 0 0 40px var(--primary-light);
+            }
+        }
+
+        .nav-phone {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            padding: 10px 20px;
+            border-radius: 50px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-phone:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+        }
+
+
+        .hero-content {
+            /* max-width: 650px; */
+            /* background: rgba(0, 0, 0, 0.65); */
+            padding: 48px;
+            /* border-radius: 24px; */
+            /* border: 1px solid rgba(255, 255, 255, 0.1); */
+        }
+
+        h1 {
+            font-size: 4.5rem;
+            line-height: 1.05;
+            font-weight: 800;
+            margin-bottom: 24px;
+            letter-spacing: -2px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .blue-text {
+            background: linear-gradient(135deg, #60a5fa 0%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: rgba(59, 130, 246, 0.6);
+            background-clip: text;
+        }
+
+        p.lead {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 32px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 16px 36px;
+            border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            font-size: 1.05rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            box-shadow: 0 6px 25px rgba(59, 130, 246, 0.5);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(59, 130, 246, 0.6);
+        }
+
+        .btn-outline {
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 120px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+
+        .section-header h2 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 32px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 28px;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background: var(--glass-card);
+            border: 1px solid var(--glass-border);
+            border-top: 2px solid rgba(255, 255, 255, 0.15);
+            padding: 36px;
+            border-radius: 24px;
+            backdrop-filter: blur(16px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+        }
+
+        .card h3 {
+            margin-bottom: 14px;
+            font-size: 1.4rem;
+            color: white;
+            font-weight: 700;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .feature-list li {
+            margin-bottom: 12px;
+            color: var(--text-muted);
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding-left: 4px;
+        }
+
+        .feature-list li::before {
+            content: "✓";
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: -2px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 8px 16px;
+            background: rgba(59, 130, 246, 0.2);
+            border: 1px solid var(--primary);
+            border-radius: 50px;
+            color: var(--primary-light);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 16px;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .tech-tag {
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            border-radius: 8px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .problem-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(239, 68, 68, 0.2);
+            border: 1px solid rgba(239, 68, 68, 0.4);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+        }
+
+        .solution-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(34, 197, 94, 0.2);
+            border: 1px solid rgba(34, 197, 94, 0.4);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+        }
+
+        .module-number {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent-cyan) 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+        }
+
+        .beta-banner {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.3) 0%, rgba(59, 130, 246, 0.3) 100%);
+            border: 1px solid rgba(139, 92, 246, 0.5);
+            padding: 24px 32px;
+            border-radius: 16px;
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .beta-banner h3 {
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        footer {
+            padding: 80px 0 40px;
+            border-top: 1px solid var(--glass-border);
+            text-align: center;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        footer h2 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+
+        @media (max-width: 900px) {
+            h1 {
+                font-size: 3rem;
+            }
+
+            .section-header h2 {
+                font-size: 2.2rem;
+            }
+
+            .hero {
+                padding-top: 120px;
+                text-align: center;
+                display: block;
+            }
+
+            .hero-content {
+                margin: 0 auto;
+            }
+
+            .btn-group {
+                justify-content: center;
+            }
+
+            .grid-2,
+            .grid-3,
+            .grid-4 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+
+            section {
+                padding: 80px 0;
+            }
+        }
+
+        /* ========================================
+           Gallery Carousel Styles
+           ======================================== */
+
+        .screenshot-gallery {
+            margin-top: 60px;
+        }
+
+        .gallery-carousel {
+            position: relative;
+        }
+
+        .gallery-item {
+            padding: 12px;
+        }
+
+        .gallery-card {
+            background: var(--glass-card);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(16px);
+            position: relative;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-card a.test-popup-link {
+            display: block;
+            cursor: zoom-in;
+            text-decoration: none;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .gallery-caption {
+            padding: 16px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Owl Carousel Custom Navigation */
+        .gallery-carousel .owl-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            pointer-events: none;
+            z-index: 10;
+            padding: 0 -20px;
+        }
+
+        .gallery-carousel .owl-nav button {
+            pointer-events: all;
+            background: rgba(59, 130, 246, 0.9) !important;
+            color: white !important;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(96, 165, 250, 0.5) !important;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+            font-size: 32px;
+            font-weight: 300;
+            line-height: 1;
+        }
+
+        .gallery-carousel .owl-nav button:hover {
+            background: rgba(96, 165, 250, 1) !important;
+            border-color: var(--primary-light) !important;
+            box-shadow: 0 6px 25px rgba(96, 165, 250, 0.6);
+            transform: scale(1.1);
+        }
+
+        .gallery-carousel .owl-nav button.disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        .gallery-carousel .owl-nav .owl-prev {
+            margin-left: -25px;
+        }
+
+        .gallery-carousel .owl-nav .owl-next {
+            margin-right: -25px;
+        }
+
+        /* Owl Carousel Custom Dots */
+        .gallery-carousel .owl-dots {
+            text-align: center;
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        /* Hide duplicate dots - show only first one */
+        .gallery-carousel .owl-dots:nth-of-type(n+2) {
+            display: none !important;
+        }
+
+
+
+        .gallery-carousel .owl-dot {
+            width: 8px;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.4) !important;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            padding: 0;
+            margin: 0;
+            outline: none;
+            box-shadow: none !important;
+        }
+
+        .gallery-carousel .owl-dot span {
+            display: none;
+        }
+
+        .gallery-carousel .owl-dot:hover {
+            background: rgba(255, 255, 255, 0.7) !important;
+            transform: scale(1.3);
+        }
+
+        .gallery-carousel .owl-dot.active {
+            background: var(--primary) !important;
+            width: 24px;
+            border-radius: 4px;
+            box-shadow: 0 0 12px rgba(59, 130, 246, 0.5) !important;
+        }
+
+
+        /* Responsive adjustments for gallery */
+        @media (max-width: 900px) {
+            .gallery-carousel .owl-nav button {
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+
+            .gallery-carousel .owl-nav .owl-prev {
+                margin-left: -15px;
+            }
+
+            .gallery-carousel .owl-nav .owl-next {
+                margin-right: -15px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .screenshot-gallery {
+                margin-top: 40px;
+            }
+
+            .gallery-item {
+                padding: 8px;
+            }
+
+            .gallery-carousel .owl-nav button {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+
+            .gallery-carousel .owl-nav .owl-prev {
+                margin-left: -10px;
+            }
+
+            .gallery-carousel .owl-nav .owl-next {
+                margin-right: -10px;
+            }
+
+            .gallery-caption {
+                padding: 12px;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="canvas-container"></div>
+
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">
+                <div class="logo-dot"></div> Tech Ocean
+            </a>
+            <a href="https://wa.me/919374626600?text=Hello%2C%20I%E2%80%99m%20interested%20in%20Tech%20Ocean%20%E2%80%93%20Diamond%20Job%20Work%20Management%20software.%20I%20would%20like%20to%20know%20more%20about%20the%20beta%2Fdemo."
+                class="nav-phone" target="_blank">
+                <span>📞</span> +91 93746 26600
+            </a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div
+                    style="color: var(--primary-light); font-weight: 700; letter-spacing: 2px; margin-bottom: 16px; font-size: 0.95rem;">
+                    DESKTOP ERP FOR DIAMOND MANUFACTURERS
+                </div>
+                <h1>Precision ERP for <br><span class="blue-text">Diamond Job Work</span></h1>
+                <p class="lead">
+                    A purpose-built desktop ERP that brings accuracy, accountability, and clarity to diamond job work
+                    operations. Stop relying on Excel—manage Jangad, pieces, carats, salary, and billing with
+                    industry-specific precision.
+                </p>
+                <div class="btn-group">
+                    <a href="https://wa.me/919374626600?text=Hello%2C%20I%E2%80%99m%20interested%20in%20Tech%20Ocean%20%E2%80%93%20Diamond%20Job%20Work%20Management%20software.%20I%20would%20like%20to%20know%20more%20about%20the%20beta%2Fdemo."
+                        class="btn btn-primary" target="_blank">Book Free Demo</a>
+                    <a href="#features" class="btn btn-outline">Explore Features</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Problem Statement -->
+    <section id="problem" style="background: rgba(0,0,0,0.2);">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">THE INDUSTRY CHALLENGE</span>
+                <h2>Why Generic Software Fails</h2>
+                <p>Diamond job work requires specialized workflows that standard ERP systems simply cannot handle</p>
+            </div>
+            <div class="grid-3">
+                <div class="card">
+                    <div class="problem-icon">📋</div>
+                    <h3>Manual Registers & Excel</h3>
+                    <p>Businesses still rely on handwritten logs and disconnected spreadsheets, leading to errors in
+                        piece and weight tracking.</p>
+                </div>
+                <div class="card">
+                    <div class="problem-icon">⚠️</div>
+                    <h3>Salary Disputes</h3>
+                    <p>Without automated output-based calculation, salary disputes with workers are common and damage
+                        trust.</p>
+                </div>
+                <div class="card">
+                    <div class="problem-icon">❌</div>
+                    <h3>No Job Visibility</h3>
+                    <p>Owners have no real-time visibility into pending jobs, work stages, or accurate inventory levels.
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="problem-icon">🔍</div>
+                    <h3>Tracking Failures</h3>
+                    <p>Jangad-based tracking, critical for diamond work, is not supported by generic accounting tools.
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="problem-icon">📊</div>
+                    <h3>Poor Reporting</h3>
+                    <p>Lack of reliable, decision-grade reports prevents informed business planning and growth.</p>
+                </div>
+                <div class="card">
+                    <div class="problem-icon">💸</div>
+                    <h3>Profitability Blind Spots</h3>
+                    <p>Without accurate loss tracking and billing, businesses lose money without even knowing it.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution -->
+    <section id="solution">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">OUR SOLUTION</span>
+                <h2>One System. Complete Control.</h2>
+                <p>Tech Ocean digitizes and controls the entire diamond job work lifecycle</p>
+            </div>
+            <div class="grid-2">
+                <div class="card">
+                    <div class="solution-icon">✅</div>
+                    <h3>Job Issuance & Return Tracking</h3>
+                    <p>Complete Jangad-based tracking with accurate piece (Pic) and carat (Ct) recording at every stage.
+                        Full traceability from job in to job out.</p>
+                </div>
+                <div class="card">
+                    <div class="solution-icon">💰</div>
+                    <h3>Automated Salary Calculation</h3>
+                    <p>Output-based salary computation linked directly to completed work. Generate printable salary
+                        slips instantly—zero manual calculation errors.</p>
+                </div>
+                <div class="card">
+                    <div class="solution-icon">📦</div>
+                    <h3>Real-Time Inventory Movement</h3>
+                    <p>Know your exact stock position at any moment. Track pieces and weight across all job stages with
+                        automatic loss and gain analysis.</p>
+                </div>
+                <div class="card">
+                    <div class="solution-icon">🧾</div>
+                    <h3>Professional Billing & Invoicing</h3>
+                    <p>Generate GST-ready bills with company branding. Clear linkage between completed jobs and billing
+                        ensures accuracy and trust.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Modules -->
+    <section id="features" style="background: rgba(0,0,0,0.2);">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">CORE MODULES</span>
+                <h2>Built for Diamond Workflows</h2>
+                <p>Every module designed around real diamond job work operations</p>
+            </div>
+            <div class="grid-3">
+                <div class="card">
+                    <div class="module-number">1</div>
+                    <h3>Master Management</h3>
+                    <ul class="feature-list">
+                        <li>Party Master with GST, PAN, rates</li>
+                        <li>Work Master (GAL, GEL, STN config)</li>
+                        <li>Employee Master with bank details</li>
+                        <li>Account Master for cash & banks</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="module-number">2</div>
+                    <h3>Job Work Management</h3>
+                    <ul class="feature-list">
+                        <li>Jangad-based Job In / Job Out</li>
+                        <li>Piece (Pic) and Carat (Ct) entry</li>
+                        <li>Real-time rate calculation</li>
+                        <li>Pending & completed job visibility</li>
+                        <li>Full job movement traceability</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="module-number">3</div>
+                    <h3>Inventory Tracking</h3>
+                    <ul class="feature-list">
+                        <li>Stage-wise stock movement</li>
+                        <li>Piece & weight at every stage</li>
+                        <li>Automatic mismatch detection</li>
+                        <li>Loss and gain reporting</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="module-number">4</div>
+                    <h3>Salary Management</h3>
+                    <ul class="feature-list">
+                        <li>Output-based auto calculation</li>
+                        <li>Work type & piece-rate logic</li>
+                        <li>Printable salary slips</li>
+                        <li>Direct job-to-salary linkage</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="module-number">5</div>
+                    <h3>Billing & Invoicing</h3>
+                    <ul class="feature-list">
+                        <li>GST-compliant invoices</li>
+                        <li>Custom company branding & logo</li>
+                        <li>PDF bill generation</li>
+                        <li>Job-to-bill linkage</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="module-number">6</div>
+                    <h3>Financial Management</h3>
+                    <ul class="feature-list">
+                        <li>Income & expense recording</li>
+                        <li>Payment tracking</li>
+                        <li>Ledger-style visibility</li>
+                        <li>Business financial reports</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="module-number">7</div>
+                    <h3>Reporting & Analytics</h3>
+                    <ul class="feature-list">
+                        <li>Job-wise & party-wise reports</li>
+                        <li>Pending job status</li>
+                        <li>Salary summaries</li>
+                        <li>Income/expense summaries</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="module-number">8</div>
+                    <h3>Import & Export</h3>
+                    <ul class="feature-list">
+                        <li>Bulk CSV data import</li>
+                        <li>Column mapping support</li>
+                        <li>Report export for analysis</li>
+                        <li>High-volume data handling</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section id="benefits">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">KEY BENEFITS</span>
+                <h2>Why Choose Tech Ocean</h2>
+                <p>Real business impact, not just features</p>
+            </div>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>🚀 Eliminate Manual Work</h3>
+                    <p>Replace handwritten registers and Excel with a single, reliable system. Save 10+ hours per week
+                        on administrative tasks.</p>
+                </div>
+                <div class="card">
+                    <h3>🤝 Zero Salary Disputes</h3>
+                    <p>Transparent, output-based calculations build trust with workers and eliminate conflicts.</p>
+                </div>
+                <div class="card">
+                    <h3>📈 Improve Accuracy</h3>
+                    <p>Mathematical precision in job tracking, inventory, and billing—reduce errors by 95%.</p>
+                </div>
+                <div class="card">
+                    <h3>⏱️ Save Time Daily</h3>
+                    <p>Automated calculations, instant reports, and streamlined workflows free your team for strategic
+                        work.</p>
+                </div>
+                <div class="card">
+                    <h3>🎯 Business Visibility</h3>
+                    <p>Real-time dashboards and reports give you complete operational control and informed
+                        decision-making.</p>
+                </div>
+                <div class="card">
+                    <h3>💎 Industry-Specific</h3>
+                    <p>Built by understanding real diamond workflows—not a generic tool adapted poorly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Users -->
+    <section id="target" style="background: rgba(0,0,0,0.2);">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">WHO IT'S FOR</span>
+                <h2>Built for Your Team</h2>
+            </div>
+            <div class="grid-4">
+                <div class="card">
+                    <h3>💼 Diamond Job Work Units</h3>
+                    <p>Core users managing daily operations</p>
+                </div>
+                <div class="card">
+                    <h3>🏭 Small & Mid Manufacturers</h3>
+                    <p>Growing businesses needing control</p>
+                </div>
+                <div class="card">
+                    <h3>👨‍💼 Factory Supervisors</h3>
+                    <p>On-ground job and inventory management</p>
+                </div>
+                <div class="card">
+                    <h3>📊 Accounting Teams</h3>
+                    <p>Finance and administrative staff</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology -->
+    <section id="technology">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">TECHNOLOGY</span>
+                <h2>Desktop-First Architecture</h2>
+                <p>Reliable, secure, and optimized for factory environments</p>
+            </div>
+            <div class="card" style="max-width: 800px; margin: 0 auto;">
+                <h3>Built for Reliability</h3>
+                <p style="margin-bottom: 20px;">
+                    Desktop application designed for offline-first operation in environments with limited or unstable
+                    internet.
+                    Structured multi-layer architecture ensures data integrity, security through controlled access, and
+                    performance
+                    optimized for daily factory usage.
+                </p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Desktop Application</span>
+                    <span class="tech-tag">Offline-First</span>
+                    <span class="tech-tag">Local Database</span>
+                    <span class="tech-tag">Controlled Access</span>
+                    <span class="tech-tag">Soft Deletes</span>
+                    <span class="tech-tag">Factory-Optimized</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshot Gallery -->
+    <section id="gallery" style="background: rgba(0,0,0,0.2);">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">SCREENSHOTS</span>
+                <h2>See It In Action</h2>
+                <p>Explore the interface and features of Tech Ocean Diamond Management System</p>
+            </div>
+
+            <div class="screenshot-gallery">
+                <div class="gallery-carousel owl-carousel owl-theme">
+                    <!-- Screenshot 1 -->
+                    <div class="gallery-item">
+                        <div class="gallery-card">
+                            <a href="./1.png" class="test-popup-link">
+                                <img src="./1.png" alt="Tech Ocean Dashboard">
+                            </a>
+                            <div class="gallery-caption">Main Dashboard</div>
+                        </div>
+                    </div>
+
+                    <!-- Screenshot 2 -->
+                    <div class="gallery-item">
+                        <div class="gallery-card">
+                            <a href="./2.png" class="test-popup-link">
+                                <img src="./2.png" alt="Job Management">
+                            </a>
+                            <div class="gallery-caption">Job Management</div>
+                        </div>
+                    </div>
+
+                    <!-- Screenshot 3 -->
+                    <div class="gallery-item">
+                        <div class="gallery-card">
+                            <a href="./3.png" class="test-popup-link">
+                                <img src="./3.png" alt="Employee Management">
+                            </a>
+                            <div class="gallery-caption">Employee Management</div>
+                        </div>
+                    </div>
+
+                    <!-- Screenshot 4 -->
+                    <div class="gallery-item">
+                        <div class="gallery-card">
+                            <a href="./4.png" class="test-popup-link">
+                                <img src="./4.png" alt="Salary Management">
+                            </a>
+                            <div class="gallery-caption">Salary Management</div>
+                        </div>
+                    </div>
+
+                    <!-- Screenshot 5 -->
+                    <div class="gallery-item">
+                        <div class="gallery-card">
+                            <a href="./5.png" class="test-popup-link">
+                                <img src="./5.png" alt="Billing System">
+                            </a>
+                            <div class="gallery-caption">Billing System</div>
+                        </div>
+                    </div>
+
+                    <!-- Screenshot 6 -->
+                    <div class="gallery-item">
+                        <div class="gallery-card">
+                            <a href="./6.png" class="test-popup-link">
+                                <img src="./6.png" alt="Party Management">
+                            </a>
+                            <div class="gallery-caption">Party Management</div>
+                        </div>
+                    </div>
+
+                    <!-- Screenshot 7 -->
+                    <div class="gallery-item">
+                        <div class="gallery-card">
+                            <a href="./7.png" class="test-popup-link">
+                                <img src="./7.png" alt="Work Master">
+                            </a>
+                            <div class="gallery-caption">Work Master</div>
+                        </div>
+                    </div>
+
+                    <!-- Screenshot 8 -->
+                    <div class="gallery-item">
+                        <div class="gallery-card">
+                            <a href="./8.png" class="test-popup-link">
+                                <img src="./8.png" alt="Reports">
+                            </a>
+                            <div class="gallery-caption">Reports & Analytics</div>
+                        </div>
+                    </div>
+
+                    <!-- Screenshot 9 -->
+                    <div class="gallery-item">
+                        <div class="gallery-card">
+                            <a href="./9.png" class="test-popup-link">
+                                <img src="./9.png" alt="Inventory Tracking">
+                            </a>
+                            <div class="gallery-caption">Inventory Tracking</div>
+                        </div>
+                    </div>
+
+                    <!-- Screenshot 10 -->
+                    <div class="gallery-item">
+                        <div class="gallery-card">
+                            <a href="./10.png" class="test-popup-link">
+                                <img src="./10.png" alt="Financial Management">
+                            </a>
+                            <div class="gallery-caption">Financial Management</div>
+                        </div>
+                    </div>
+
+                    <!-- Screenshot 11 -->
+                    <div class="gallery-item">
+                        <div class="gallery-card">
+                            <a href="./11.png" class="test-popup-link">
+                                <img src="./11.png" alt="Settings">
+                            </a>
+                            <div class="gallery-caption">Settings & Configuration</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beta Program -->
+    <section id="beta" style="background: rgba(0,0,0,0.2);">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">CURRENT STATUS</span>
+                <h2>Join Our Beta Program</h2>
+            </div>
+            <div class="beta-banner">
+                <h3>🚀 Limited Beta Now Open</h3>
+                <p style="color: var(--text-muted); margin-top: 12px; font-size: 1.1rem;">
+                    We're currently accepting select businesses for invitation-based beta testing.
+                    Our focus is on stability, correctness, and real-user feedback.
+                    Beta participants get priority support and influence future features.
+                </p>
+                <a href="https://wa.me/919374626600?text=Hello%2C%20I%E2%80%99m%20interested%20in%20Tech%20Ocean%20%E2%80%93%20Diamond%20Job%20Work%20Management%20software.%20I%20would%20like%20to%20know%20more%20about%20the%20beta%2Fdemo."
+                    class="btn btn-primary" style="margin-top: 24px;" target="_blank">
+                    Request Beta Access
+                </a>
+            </div>
+            <div class="grid-3" style="margin-top: 40px;">
+                <div class="card">
+                    <h3>✅ What's Ready</h3>
+                    <ul class="feature-list">
+                        <li>Complete job work tracking</li>
+                        <li>Automated salary system</li>
+                        <li>Professional billing</li>
+                        <li>Core financial management</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>🔮 Coming Soon</h3>
+                    <ul class="feature-list">
+                        <li>Enhanced reporting dashboard</li>
+                        <li>Role-based access control</li>
+                        <li>Advanced analytics</li>
+                        <li>Mobile companion app</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>🎯 Future Plans</h3>
+                    <ul class="feature-list">
+                        <li>Commercial licensing</li>
+                        <li>Cloud backup option</li>
+                        <li>Multi-location support</li>
+                        <li>API integrations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Footer -->
+    <footer>
+        <div class="container">
+            <h2>Ready to Transform Your Operations?</h2>
+            <p style="color: var(--text-muted); font-size: 1.2rem; margin: 16px 0 32px;">
+                Book a free demo and see how Tech Ocean can bring precision to your diamond business
+            </p>
+            <a href="https://wa.me/919374626600?text=Hello%2C%20I%E2%80%99m%20interested%20in%20Tech%20Ocean%20%E2%80%93%20Diamond%20Job%20Work%20Management%20software.%20I%20would%20like%20to%20know%20more%20about%20the%20beta%2Fdemo."
+                style="color: var(--primary-light); font-size: 2rem; font-weight: 800; text-decoration: none; display: block; margin: 24px 0;"
+                target="_blank">
+                📞 +91 93746 26600
+            </a>
+            <p style="color: var(--text-muted); margin-top: 40px;">
+                <strong>Tech Ocean – Diamond Job Work Management</strong><br>
+                A purpose-built ERP solution for diamond manufacturing excellence
+            </p>
+            <p
+                style="color: var(--text-muted); margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--glass-border);">
+                Developed by Sarthak Patel | <a href="mailto:sarthakpatel1315@gmail.com"
+                    style="color: var(--primary-light);">sarthakpatel1315@gmail.com</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // ========================================
+        // GALLERY CAROUSEL INITIALIZATION
+        // ========================================
+        $(document).ready(function () {
+            $('.gallery-carousel').owlCarousel({
+                loop: true,
+                margin: 24,
+                nav: true,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 4000,
+                autoplayHoverPause: true,
+                navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],
+                responsive: {
+                    0: {
+                        items: 1,
+                        margin: 16
+                    },
+                    600: {
+                        items: 2,
+                        margin: 20
+                    },
+                    900: {
+                        items: 3,
+                        margin: 24
+                    }
+                }
+            });
+
+            // Initialize Magnific Popup for image modal
+            $('.test-popup-link').magnificPopup({
+                type: 'image',
+                gallery: {
+                    enabled: true
+                }
+            });
+        });
+    </script>
+
+    <script>
+        // ========================================
+        // ENHANCED THREE.JS DIAMOND VISUALIZATION
+        // ========================================
+
+        // 1. Setup Scene with better configuration
+        const scene = new THREE.Scene();
+        scene.fog = new THREE.FogExp2(0x020617, 0.025); // Lighter fog for better visibility
+
+        const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 100);
+        camera.position.set(0, 0, 12);
+
+        const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)); // Optimize for performance
+        renderer.shadowMap.enabled = true;
+        renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+        document.getElementById('canvas-container').appendChild(renderer.domElement);
+
+        // 2. Realistic Lighting for Diamond Physics
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+        scene.add(ambientLight);
+
+        // Main directional light (white light for proper refraction)
+        const mainLight = new THREE.DirectionalLight(0xffffff, 1.5);
+        mainLight.position.set(5, 8, 5);
+        mainLight.castShadow = true;
+        scene.add(mainLight);
+
+        // Accent lights for sparkle effect (white for realistic color dispersion)
+        const lightBlue = new THREE.PointLight(0xCCE5FF, 3, 60);
+        lightBlue.position.set(6, 4, 6);
+        scene.add(lightBlue);
+
+        const lightCyan = new THREE.PointLight(0xE0F7FA, 2.5, 50);
+        lightCyan.position.set(-6, 3, 4);
+        scene.add(lightCyan);
+
+        const lightPurple = new THREE.PointLight(0xF3E5F5, 2, 45);
+        lightPurple.position.set(-3, -4, 8);
+        scene.add(lightPurple);
+
+        // Rim light for edge definition (soft white)
+        const lightPink = new THREE.PointLight(0xFFF3E0, 1.5, 40);
+        lightPink.position.set(0, 0, -8);
+        scene.add(lightPink);
+
+        // 3. Realistic Diamond with Physical Material
+        const diamondGroup = new THREE.Group();
+
+        const segments = 8;
+
+        // Realistic Diamond Material using PBR (Physically Based Rendering)
+        const diamondMaterial = new THREE.MeshPhysicalMaterial({
+            color: 0xffffff,           // Pure white base
+            metalness: 0,              // Not metallic
+            roughness: 0.05,           // Very smooth surface
+            transmission: 0.95,        // High transparency
+            thickness: 0.5,            // Thin for refraction
+            envMapIntensity: 1.5,      // Environment reflection strength
+            clearcoat: 1,              // Clear coating layer
+            clearcoatRoughness: 0.1,   // Smooth coating
+            ior: 2.417,                // Index of refraction for diamond
+            reflectivity: 0.95,        // High reflectivity
+            transparent: true,
+            opacity: 0.15,             // Highly transparent
+            side: THREE.DoubleSide,
+            depthWrite: false
+        });
+
+        // Crown (top part) - Realistic diamond
+        const crownGeo = new THREE.CylinderGeometry(1.5, 3.5, 1.5, segments);
+        const crown = new THREE.Mesh(crownGeo, diamondMaterial);
+        crown.position.y = 0.75;
+        crown.rotation.y = Math.PI / segments;
+        crown.castShadow = true;
+        crown.receiveShadow = true;
+        diamondGroup.add(crown);
+
+        // Pavilion (bottom cone) - Realistic diamond
+        const pavilionGeo = new THREE.ConeGeometry(3.5, 3.5, segments);
+        const pavilion = new THREE.Mesh(pavilionGeo, diamondMaterial);
+        pavilion.rotation.x = Math.PI;
+        pavilion.position.y = -1.75;
+        pavilion.rotation.y = Math.PI / segments;
+        pavilion.castShadow = true;
+        pavilion.receiveShadow = true;
+        diamondGroup.add(pavilion);
+
+        // Subtle wireframe for facet definition
+        const wireMat = new THREE.MeshBasicMaterial({
+            color: 0xE3F2FD,       // Very light blue-white
+            wireframe: true,
+            transparent: true,
+            opacity: 0.15
+        });
+
+        const wireCrown = new THREE.Mesh(crownGeo, wireMat);
+        wireCrown.position.y = 0.75;
+        wireCrown.rotation.y = Math.PI / segments;
+
+        const wirePav = new THREE.Mesh(pavilionGeo, wireMat);
+        wirePav.position.y = -1.75;
+        wirePav.rotation.x = Math.PI;
+        wirePav.rotation.y = Math.PI / segments;
+
+        diamondGroup.add(wireCrown);
+        diamondGroup.add(wirePav);
+
+        scene.add(diamondGroup);
+
+        // 4. Enhanced Particle System (Diamond Sparkles)
+        const particlesGeo = new THREE.BufferGeometry();
+        const particlesCount = 300;
+        const posArray = new Float32Array(particlesCount * 3);
+        const sizeArray = new Float32Array(particlesCount);
+
+        for (let i = 0; i < particlesCount; i++) {
+            // Position
+            posArray[i * 3] = (Math.random() - 0.5) * 30;
+            posArray[i * 3 + 1] = (Math.random() - 0.5) * 30;
+            posArray[i * 3 + 2] = (Math.random() - 0.5) * 30;
+            // Varying sizes
+            sizeArray[i] = Math.random() * 0.08 + 0.02;
+        }
+
+        particlesGeo.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+        particlesGeo.setAttribute('size', new THREE.BufferAttribute(sizeArray, 1));
+
+        const particlesMat = new THREE.PointsMaterial({
+            size: 0.06,
+            color: 0x60a5fa,
+            transparent: true,
+            opacity: 0.7,
+            sizeAttenuation: true,
+            blending: THREE.AdditiveBlending // Sparkle effect
+        });
+
+        const particlesMesh = new THREE.Points(particlesGeo, particlesMat);
+        scene.add(particlesMesh);
+
+        // 5. Responsive Layout
+        function updateLayout() {
+            if (window.innerWidth > 900) {
+                diamondGroup.position.set(4.5, 0, 0);
+                diamondGroup.scale.set(1.1, 1.1, 1.1);
+            } else if (window.innerWidth > 600) {
+                diamondGroup.position.set(0, 2, 0);
+                diamondGroup.scale.set(0.8, 0.8, 0.8);
+            } else {
+                diamondGroup.position.set(0, 3, 0);
+                diamondGroup.scale.set(0.6, 0.6, 0.6);
+            }
+        }
+        updateLayout();
+
+        // 6. Enhanced Animation with Smooth Camera Movement
+        let mouseX = 0;
+        let mouseY = 0;
+        let time = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = (e.clientX / window.innerWidth) * 2 - 1;
+            mouseY = -(e.clientY / window.innerHeight) * 2 + 1;
+        });
+
+        function animate() {
+            requestAnimationFrame(animate);
+            time += 0.01;
+
+            // Smooth diamond rotation
+            diamondGroup.rotation.y += 0.004;
+
+            // Mouse-based tilt with smoother interpolation
+            diamondGroup.rotation.x += (-mouseY * 0.4 - diamondGroup.rotation.x) * 0.03;
+            diamondGroup.rotation.z += (mouseX * 0.15 - diamondGroup.rotation.z) * 0.03;
+
+            // Subtle floating animation
+            diamondGroup.position.y += Math.sin(time * 0.5) * 0.001;
+
+            // Rotate particle environment
+            particlesMesh.rotation.y -= 0.0015;
+            particlesMesh.rotation.x += 0.0008;
+
+            // Animate accent lights for realistic sparkle
+            lightBlue.intensity = 3 + Math.sin(time * 2) * 0.8;
+            lightCyan.intensity = 2.5 + Math.cos(time * 1.5) * 0.6;
+            lightPurple.intensity = 2 + Math.sin(time * 1.8) * 0.5;
+            lightPink.intensity = 1.5 + Math.cos(time * 2.2) * 0.4;
+
+            // Subtle camera movement for depth
+            camera.position.x = Math.sin(time * 0.3) * 0.5;
+            camera.position.y = Math.cos(time * 0.2) * 0.3;
+            camera.lookAt(diamondGroup.position);
+
+            renderer.render(scene, camera);
+        }
+        animate();
+
+        // 7. Resize Handler
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+            updateLayout();
+        });
+
+        // 8. Performance optimization - pause animation when tab is not visible
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                renderer.setAnimationLoop(null);
+            } else {
+                animate();
+            }
+        });
+    </script>
+</body>
+
+</html>

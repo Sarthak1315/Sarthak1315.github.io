@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS - Enterprise Lead Management System</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- 3D Background Canvas -->
+    <canvas id="webgl"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">◆</span>
+                <span class="logo-text">LMS Enterprise</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#architecture">Architecture</a>
+                <a href="#benefits">Benefits</a>
+                <a href="./Doc/LMS_API_Endpoints.md" class="btn-primary">API Docs</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="page-content">
+
+        <!-- Hero Section -->
+        <section class="section hero" id="hero">
+            <div class="container">
+                <div class="hero-badge">ASP.NET Core 8 • Multi-Tenant • Real-time</div>
+                <h1 class="hero-title">Enterprise Lead Management System</h1>
+                <p class="hero-subtitle">Powerful multi-tenant CRM solution with advanced lead tracking, intelligent
+                    follow-ups, and comprehensive analytics built on ASP.NET Core 8</p>
+                <div class="hero-buttons">
+                    <button class="cta-btn primary" onclick="window.location.href='./Doc/LMS_Functionality_Summary.md'">
+                        📋 View Documentation
+                    </button>
+                    <button class="cta-btn secondary" onclick="window.location.href='./Doc/LMS_API_Endpoints.md'">
+                        🚀 API Reference
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">58+</div>
+                        <div class="stat-label">API Endpoints</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">10</div>
+                        <div class="stat-label">Core Modules</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Multi-Tenant</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Multi-Tenant Architecture -->
+        <section class="section feature-section right" id="architecture">
+            <div class="feature-content">
+                <div class="feature-badge">🏢 ENTERPRISE READY</div>
+                <h2 class="feature-title">Multi-Tenant Architecture</h2>
+                <p class="feature-description">Complete organizational isolation where multiple companies can use the
+                    same LMS instance while keeping their data completely separate and secure.</p>
+                <ul class="feature-list">
+                    <li>
+                        <span class="check">✓</span>
+                        <div>
+                            <strong>Tenant-Specific Data Segregation</strong>
+                            <span>Complete data isolation per organization</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <div>
+                            <strong>Subscription Management</strong>
+                            <span>Track subscriptions, expiry, and usage analytics</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <div>
+                            <strong>Automatic Isolation</strong>
+                            <span>JWT claims-based tenant filtering on all endpoints</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <div>
+                            <strong>Scalable Infrastructure</strong>
+                            <span>Host unlimited organizations on single platform</span>
+                        </div>
+                    </li>
+                </ul>
+                <div class="tech-stack">
+                    <span class="tech-tag">ASP.NET Core 8</span>
+                    <span class="tech-tag">Entity Framework</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advanced Lead Management -->
+        <section class="section feature-section left" id="features">
+            <div class="feature-content">
+                <div class="feature-badge">🎯 INTELLIGENT TRACKING</div>
+                <h2 class="feature-title">Advanced Lead Management</h2>
+                <p class="feature-description">Powerful lead tracking with 16+ filter parameters, instant search, lead
+                    assignment, conversion tracking, and comprehensive analytics.</p>
+                <ul class="feature-list">
+                    <li>
+                        <span class="check">✓</span>
+                        <div>
+                            <strong>Advanced Search & Filtering</strong>
+                            <span>Multi-criteria search with pagination and sorting</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <div>
+                            <strong>Lead Assignment & Conversion</strong>
+                            <span>Assign leads to team members and track conversions</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <div>
+                            <strong>Real-time Statistics</strong>
+                            <span>Dashboard with conversion rates and performance metrics</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <div>
+                            <strong>Geographic & Value Filtering</strong>
+                            <span>Filter by location, value range, and custom tags</span>
+                        </div>
+                    </li>
+                </ul>
+                <div class="metrics">
+                    <div class="metric">
+                        <div class="metric-value">60%</div>
+                        <div class="metric-label">Faster Searches</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">40%</div>
+                        <div class="metric-label">Fewer Missed Follow-ups</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Smart Follow-Ups -->
+        <section class="section feature-section right">
+            <div class="feature-content">
+                <div class="feature-badge">📅 NEVER MISS A BEAT</div>
+                <h2 class="feature-title">Smart Follow-Up System</h2>
+                <p class="feature-description">Intelligent scheduling with automatic reminders, today/overdue/upcoming
+                    views, and comprehensive follow-up history tracking.</p>
+                <ul class="feature-list">
+                    <li>
+                        <span class="check">✓</span>
+                        <div>
+                            <strong>Today's Follow-ups</strong>
+                            <span>All items due today in one organized view</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <div>
+                            <strong>Overdue Alerts</strong>
+                            <span>Missed items highlighted with days overdue count</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <div>
+                            <strong>Upcoming Planner</strong>
+                            <span>Configurable future view (7, 14, 30 days ahead)</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <div>
+                            <strong>Multiple Follow-up Types</strong>
+                            <span>Call, WhatsApp, Email, Meeting with attachments</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Security & Activity Logging -->
+        <section class="section feature-section left">
+            <div class="feature-content">
+                <div class="feature-badge">🔐 ENTERPRISE SECURITY</div>
+                <h2 class="feature-title">Security & Complete Audit Trail</h2>
+                <p class="feature-description">JWT-based authentication with automatic activity logging, IP tracking,
+                    and comprehensive security features for compliance.</p>
+                <ul class="feature-list">
+                    <li>
+                        <span class="check">✓</span>
+                        <div>
+                            <strong>JWT Multi-Tenant Auth</strong>
+                            <span>Secure tokens with user_id, tenant_id, role claims</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <div>
+                            <strong>Automatic Activity Logging</strong>
+                            <span>Database triggers log all changes with old/new values</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <div>
+                            <strong>IP & Device Tracking</strong>
+                            <span>Complete forensic trail with IP addresses and user agents</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <div>
+                            <strong>Role-Based Access Control</strong>
+                            <span>Admin and SalesRep roles with granular permissions</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Key Benefits -->
+        <section class="section benefits-section" id="benefits">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Why Choose LMS Enterprise?</h2>
+                    <p class="section-subtitle">Built for scale, designed for efficiency, optimized for results</p>
+                </div>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">⚡</div>
+                        <h3>60% Faster</h3>
+                        <p>Advanced search reduces lead lookup time dramatically with instant filtering</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">📊</div>
+                        <h3>Data-Driven</h3>
+                        <p>Real-time analytics and statistics for informed business decisions</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">🔒</div>
+                        <h3>100% Secure</h3>
+                        <p>Enterprise-grade security with complete audit trail and compliance</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">📈</div>
+                        <h3>Scalable</h3>
+                        <p>Multi-tenant architecture supports unlimited organizations effortlessly</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">🎯</div>
+                        <h3>Never Miss</h3>
+                        <p>Smart follow-up system ensures 40% reduction in missed opportunities</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">🚀</div>
+                        <h3>Modern Stack</h3>
+                        <p>Built on ASP.NET Core 8 with latest best practices and patterns</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack -->
+        <section class="section tech-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Powered By Modern Technology</h2>
+                </div>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <div class="tech-name">ASP.NET Core 8</div>
+                        <div class="tech-desc">Backend Framework</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-name">Entity Framework</div>
+                        <div class="tech-desc">ORM</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-name">PostgreSQL</div>
+                        <div class="tech-desc">Database</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-name">JWT</div>
+                        <div class="tech-desc">Authentication</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-name">Bootstrap 5</div>
+                        <div class="tech-desc">UI Framework</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-name">Chart.js</div>
+                        <div class="tech-desc">Analytics</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Ready to Transform Your Lead Management?</h2>
+                    <p class="cta-subtitle">Explore comprehensive documentation and start building today</p>
+                    <div class="cta-buttons">
+                        <button class="cta-btn primary large"
+                            onclick="window.location.href='./Doc/LMS_Functionality_Summary.md'">
+                            📖 Read Full Documentation
+                        </button>
+                        <button class="cta-btn secondary large"
+                            onclick="window.location.href='./Doc/LMS_New_Features_Guide.md'">
+                            ✨ New Features Guide
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h4>LMS Enterprise</h4>
+                        <p>Multi-tenant lead management system built with ASP.NET Core 8</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Documentation</h4>
+                        <a href="./Doc/LMS_Functionality_Summary.md">Functionality Summary</a>
+                        <a href="./Doc/LMS_API_Endpoints.md">API Endpoints</a>
+                        <a href="./Doc/LMS_New_Features_Guide.md">New Features Guide</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Features</h4>
+                        <a href="#architecture">Multi-Tenant</a>
+                        <a href="#features">Lead Management</a>
+                        <a href="#benefits">Benefits</a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 LMS Enterprise. Built with ASP.NET Core 8 • Version 1.1</p>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Three.js from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
