@@ -72,19 +72,34 @@
     <section class="hero" id="home">
         <div class="hero-bg">
             <div class="hero-gradient"></div>
-            <div class="hero-grid"></div>
+            <div class="cyber-grid"></div>
+            <div class="hero-shapes">
+                <div class="shape shape-1">&lt;/&gt;</div>
+                <div class="shape shape-2">{ }</div>
+                <div class="shape shape-3">#</div>
+                <div class="shape shape-4">_</div>
+                <div class="shape shape-5">@</div>
+                <div class="shape shape-6">$</div>
+                <div class="shape shape-7">&amp;</div>
+                <div class="shape shape-8">^</div>
+                <div class="shape shape-9">( )</div>
+            </div>
             <div class="particles" id="particles"></div>
         </div>
 
         <div class="hero-content">
             <p class="hero-greeting animate-fade-up">Hello, I'm</p>
-            <h1 class="hero-name animate-fade-up delay-1">Sarthak Patel</h1>
+
+            <!-- Glitch Effect Name -->
+            <div class="glitch-wrapper animate-fade-up delay-1">
+                <h1 class="hero-name glitch" data-text="Sarthak Patel">Sarthak Patel</h1>
+            </div>
 
             <div class="hero-roles animate-fade-up delay-2">
-                <span class="role-tag">Software Developer</span>
-                <span class="role-tag">Cybersecurity Analyst</span>
-                <span class="role-tag">Backend Developer</span>
-                <span class="role-tag">AI Enthusiast</span>
+                <span class="role-static">I am a </span>
+                <span class="typing-wrapper">
+                    <span class="role-dynamic" id="typing-text"></span><span class="cursor-blink">|</span>
+                </span>
             </div>
 
             <p class="hero-description animate-fade-up delay-3">
@@ -92,11 +107,11 @@
             </p>
 
             <div class="hero-cta animate-fade-up delay-4">
-                <a href="#projects" class="btn btn-primary">
+                <a href="#projects" class="btn btn-primary btn-neon">
                     <i data-lucide="folder-open"></i>
                     View Projects
                 </a>
-                <a href="#contact" class="btn btn-secondary">
+                <a href="#contact" class="btn btn-secondary btn-neon">
                     <i data-lucide="mail"></i>
                     Get in Touch
                 </a>

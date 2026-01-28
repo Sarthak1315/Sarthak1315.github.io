@@ -14,10 +14,101 @@ document.addEventListener('DOMContentLoaded', () => {
     initParticles();
     initScrollEffects();
     initCounterAnimation();
+    initCounterAnimation();
+    initCounterAnimation();
+    initTypingAnimation();
+    initFloatingShapes(); // Add random shapes
     initContactForm();
     initBackToTop();
     initFooterYear();
 });
+
+/* ========================================
+   FLOATING SHAPES RANDOMIZER (WANDERING)
+======================================== */
+function initFloatingShapes() {
+    const shapes = document.querySelectorAll('.shape');
+
+    shapes.forEach((shape) => {
+        // Initial Random Position & Size
+        const startTop = Math.floor(Math.random() * 90) + 5;
+        const startLeft = Math.floor(Math.random() * 90) + 5;
+        const randomSize = Math.floor(Math.random() * 4) + 4; // 4rem - 8rem
+
+        shape.style.top = `${startTop}%`;
+        shape.style.left = `${startLeft}%`;
+        shape.style.fontSize = `${randomSize}rem`;
+
+        // Continuous Wandering Function
+        function wander() {
+            // Random duration for this specific leg of the journey
+            const duration = Math.floor(Math.random() * 10) + 15; // 15s - 25s
+
+            // Random Translation (relative to viewport approx)
+            // Limit movement to avoid going too far off screen
+            const moveX = (Math.random() - 0.5) * 500; // -250px to +250px
+            const moveY = (Math.random() - 0.5) * 500; // -250px to +250px
+            const rotate = Math.floor(Math.random() * 360);
+
+            // Apply Transition & Transform
+            shape.style.transition = `transform ${duration}s ease-in-out`;
+            shape.style.transform = `translate(${moveX}px, ${moveY}px) rotate(${rotate}deg)`;
+
+            // Schedule next move
+            setTimeout(wander, duration * 1000);
+        }
+
+        // Start wandering with a slight random initial delay to desynchronize
+        setTimeout(wander, Math.random() * 5000);
+    });
+}
+
+/* ========================================
+   TYPING ANIMATION
+======================================== */
+function initTypingAnimation() {
+    const typingElement = document.getElementById('typing-text');
+    if (!typingElement) return;
+
+    const roles = [
+        "Software Developer",
+        "Cybersecurity Analyst",
+        "Backend Developer",
+        "AI Enthusiast"
+    ];
+
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typeSpeed = 100;
+
+    function type() {
+        const currentRole = roles[roleIndex];
+
+        if (isDeleting) {
+            typingElement.textContent = currentRole.substring(0, charIndex - 1);
+            charIndex--;
+            typeSpeed = 50; // Faster deleting speed
+        } else {
+            typingElement.textContent = currentRole.substring(0, charIndex + 1);
+            charIndex++;
+            typeSpeed = 100; // Normal typing speed
+        }
+
+        if (!isDeleting && charIndex === currentRole.length) {
+            isDeleting = true;
+            typeSpeed = 2000; // Pause at end
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            roleIndex = (roleIndex + 1) % roles.length;
+            typeSpeed = 500; // Pause before new word
+        }
+
+        setTimeout(type, typeSpeed);
+    }
+
+    type();
+}
 
 /* ========================================
    LOADER
