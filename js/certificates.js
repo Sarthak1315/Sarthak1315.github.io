@@ -23,6 +23,8 @@ async function loadCertificates() {
         if (!response.ok) throw new Error('Failed to load certificates');
 
         allCertificates = await response.json();
+        // Sort by order property (ascending)
+        allCertificates.sort((a, b) => (a.order || 999) - (b.order || 999));
         visibleCertificates = allCertificates;
 
         // Clear loader
@@ -35,6 +37,9 @@ async function loadCertificates() {
 
         // Initial Render
         renderCertificates(allCertificates);
+
+        // Generate filter buttons dynamically
+        generateFilterButtons();
 
     } catch (error) {
         console.error('Error loading certificates:', error);
@@ -104,7 +109,87 @@ function createCertificateCard(cert, index) {
 /* ========================================
    FILTERS
 ======================================== */
-function initCertificateFilters() {
+
+// Display name mapping for categories
+const categoryDisplayNames = {
+    'all': 'All',
+    'google': 'Google',
+    'ibm': 'IBM',
+    'coursera': 'Coursera',
+    'hackerrank': 'HackerRank',
+    'srki': 'SRKI/SCET',
+    'svnit': 'SVNIT',
+    'iitb': 'IIT Bombay',
+    'isro': 'ISRO',
+    'deeplearning': 'DeepLearning.AI',
+    'language': 'Programming',
+    'security': 'Security',
+    'ai': 'AI/ML',
+    'web': 'Web Dev',
+    'database': 'Database',
+    'other': 'Other'
+};
+
+// Priority order for filter buttons (lower = appears first)
+const categoryPriority = {
+    'all': 0,
+    'google': 1,
+    'ibm': 2,
+    'isro': 3,
+    'iitb': 5,
+    'svnit': 6,
+    'coursera': 9,
+    'hackerrank': 8,
+    'srki': 7,
+    'deeplearning': 4,
+    'language': 10,
+    'security': 11,
+    'ai': 12,
+    'web': 13,
+    'database': 14,
+    'other': 99
+};
+
+function generateFilterButtons() {
+    const filterContainer = document.querySelector('.certificates-filter');
+    if (!filterContainer || allCertificates.length === 0) return;
+
+    // Extract unique categories from all certificates
+    const categories = new Set();
+    allCertificates.forEach(cert => {
+        const cats = Array.isArray(cert.category) ? cert.category : [cert.category];
+        cats.forEach(cat => categories.add(cat));
+    });
+
+    // Convert to array and sort by priority
+    const sortedCategories = Array.from(categories).sort((a, b) => {
+        return (categoryPriority[a] || 50) - (categoryPriority[b] || 50);
+    });
+
+    // Clear existing buttons and rebuild
+    filterContainer.innerHTML = '';
+
+    // Add "All" button first
+    const allBtn = document.createElement('button');
+    allBtn.className = 'filter-btn active';
+    allBtn.dataset.filter = 'all';
+    allBtn.textContent = 'All';
+    filterContainer.appendChild(allBtn);
+
+    // Add category buttons
+    sortedCategories.forEach(cat => {
+        const btn = document.createElement('button');
+        btn.className = 'filter-btn';
+        btn.dataset.filter = cat;
+        btn.textContent = categoryDisplayNames[cat] || cat.charAt(0).toUpperCase() + cat.slice(1);
+        filterContainer.appendChild(btn);
+    });
+
+    // Initialize click handlers
+    initFilterClickHandlers();
+}
+
+function initFilterClickHandlers() {
     const buttons = document.querySelectorAll('.certificates-filter .filter-btn');
     if (!buttons.length) return;
 
@@ -128,6 +213,11 @@ function initCertificateFilters() {
             renderCertificates(filtered);
         });
     });
+}
+
+function initCertificateFilters() {
+    // Filters are now generated dynamically after certificates load
+    // This function is kept for backward compatibility
 }
 
 /* ========================================
