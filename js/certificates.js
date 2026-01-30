@@ -41,6 +41,9 @@ async function loadCertificates() {
         // Generate filter buttons dynamically
         generateFilterButtons();
 
+        // Check URL params for direct certificate link
+        checkUrlParams();
+
     } catch (error) {
         console.error('Error loading certificates:', error);
         grid.innerHTML = `
@@ -290,4 +293,43 @@ function navigateLightbox(direction) {
         issuerElement.textContent = nextCert.issuer;
         imgElement.style.opacity = '1';
     }, 200);
+}
+
+/* ========================================
+   URL PARAMETER HANDLING
+   Usage: 
+   - certificates.html?cert=3 (open by order number)
+   - certificates.html?title=Python (open by title, case-insensitive)
+======================================== */
+function checkUrlParams() {
+    const urlParams = new URLSearchParams(window.location.search);
+
+    // Check for 'cert' parameter (order number)
+    const certOrder = urlParams.get('cert');
+    if (certOrder) {
+        const orderNum = parseInt(certOrder);
+        const cert = allCertificates.find(c => c.order === orderNum);
+        if (cert) {
+            // Small delay to ensure DOM is ready
+            setTimeout(() => {
+                openLightbox(cert.image, cert.title, cert.issuer);
+            }, 100);
+            return;
+        }
+    }
+
+    // Check for 'title' parameter (partial match, case-insensitive)
+    const certTitle = urlParams.get('title');
+    if (certTitle) {
+        const searchTitle = certTitle.toLowerCase();
+        const cert = allCertificates.find(c =>
+            c.title.toLowerCase().includes(searchTitle)
+        );
+        if (cert) {
+            setTimeout(() => {
+                openLightbox(cert.image, cert.title, cert.issuer);
+            }, 100);
+            return;
+        }
+    }
 }
