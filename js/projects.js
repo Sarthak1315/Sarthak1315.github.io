@@ -147,6 +147,10 @@ function createProjectCard(project, index) {
                 <a href="${project.githubUrl}" class="btn-link" target="_blank" rel="noopener noreferrer">
                     <i data-lucide="github"></i> Source Code
                 </a>` : ''}
+                ${project.detailedDoc ? `
+                <a href="${project.detailedDoc}" class="btn-link" target="_blank" rel="noopener noreferrer">
+                    <i data-lucide="file-text"></i> Detailed Doc
+                </a>` : ''}
             </div>
         </div>
     `;
