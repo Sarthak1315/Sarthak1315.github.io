@@ -3,7 +3,8 @@
     "description": "Complete restaurant point-of-sale system with admin panel, waiter ordering, counter management, and cashier billing modules",
     "technologies": [
         "C#",
-        "WinForms",
+        "webForms",
+        "Asp.NET",
         "SQL Server",
         "Crystal Reports"
     ],
