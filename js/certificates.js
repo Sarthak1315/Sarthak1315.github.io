@@ -2,6 +2,9 @@
    CERTIFICATES LOADER (DYNAMIC VERSION)
 ======================================== */
 
+/* jsDelivr CDN base URL for certificate images */
+const CDN_BASE_URL = 'https://cdn.jsdelivr.net/gh/Sarthak1315/Sarthak1315.github.io@main/assets/Certificate/';
+
 document.addEventListener('DOMContentLoaded', () => {
     loadCertificates();
     initCertificateFilters();

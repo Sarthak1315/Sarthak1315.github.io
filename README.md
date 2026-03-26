@@ -1,4 +1,4 @@
-![MasterHead](https://storage.googleapis.com/myuploads-ad647.appspot.com/Navy%20Blue%20Geometric%20Technology%20LinkedIn%20Banner.png)
+![MasterHead](https://cdn.jsdelivr.net/gh/Sarthak1315/Sarthak1315.github.io@main/assets/Navy%20Blue%20Geometric%20Technology%20LinkedIn%20Banner.png)
 
 <h1 align="center">Hi, I'm Sarthak Patel</h1>
 <h3 align="center">Full-Stack .NET Developer | AI Engineer | Cybersecurity Enthusiast</h3>
