@@ -6,7 +6,7 @@
         "JavaScript",
         "MySQL"
     ],
-    "image": "assets/Projects/p1.png",
+    "image": "https://cdn.jsdelivr.net/gh/Sarthak1315/Sarthak1315.github.io@main/assets/Projects/mup.png",
     "liveUrl": "https://github.com/Sarthak1315/MyUploads",
     "githubUrl": "https://github.com/Sarthak1315/MyUploads",
     "category": [
@@ -15,5 +15,5 @@
         "fullstack"
     ],
     "featured": true,
-    "order": 4
+    "order": 6
 }

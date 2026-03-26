@@ -6,7 +6,7 @@
         "JavaScript",
         "MySQL"
     ],
-    "image": "assets/Projects/p2.png",
+    "image": "https://cdn.jsdelivr.net/gh/Sarthak1315/Sarthak1315.github.io@main/assets/Projects/nsaver.png",
     "liveUrl": "https://github.com/Sarthak1315/Note-Saver",
     "githubUrl": "https://github.com/Sarthak1315/Note-Saver",
     "category": [
@@ -15,5 +15,5 @@
         "fullstack"
     ],
     "featured": true,
-    "order": 5
+    "order": 7
 }

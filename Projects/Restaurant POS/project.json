@@ -1,0 +1,28 @@
+{
+    "title": "Restaurant POS - Khana Khazana",
+    "description": "Complete restaurant point-of-sale system with admin panel, waiter ordering, counter management, and cashier billing modules",
+    "technologies": [
+        "C#",
+        "WinForms",
+        "SQL Server",
+        "Crystal Reports"
+    ],
+    "image": [
+        "./Projects/Restaurant POS/admin_login.png",
+        "./Projects/Restaurant POS/admin-menu.png",
+        "./Projects/Restaurant POS/admin-item5.png",
+        "./Projects/Restaurant POS/waiter_3.png",
+        "./Projects/Restaurant POS/counter2.jpg",
+        "./Projects/Restaurant POS/cashier_bill.png"
+    ],
+    "liveUrl": "https://youtu.be/xiTzdqBjqDI",
+    "githubUrl": "",
+    "category": [
+        "frontend",
+        "backend",
+        "fullstack"
+    ],
+    "featured": true,
+    "detailedDoc": "./Projects/Restaurant POS/Khana_Khazana_Project_Documentation.pdf",
+    "order": 4
+}

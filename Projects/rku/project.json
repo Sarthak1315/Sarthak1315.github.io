@@ -1,0 +1,28 @@
+{
+    "title": "RKU - University Admission Management System",
+    "description": "University admission management system with admin portal, student registration, faculty management, merit list generation, and fee structure modules",
+    "technologies": [
+        "ASP.NET",
+        "C#",
+        "SQL Server",
+        "Bootstrap"
+    ],
+    "image": [
+        "./Projects/rku/1.png",
+        "./Projects/rku/3.png",
+        "./Projects/rku/4.png",
+        "./Projects/rku/5.png",
+        "./Projects/rku/6.png",
+        "./Projects/rku/9.png"
+    ],
+    "liveUrl": "",
+    "githubUrl": "",
+    "category": [
+        "frontend",
+        "backend",
+        "fullstack"
+    ],
+    "featured": true,
+    "detailedDoc": "./Projects/rku/RKU_AMS_ProjectDoc.pdf",
+    "order": 5
+}
