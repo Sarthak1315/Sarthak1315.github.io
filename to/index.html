@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Ocean — Software That Scales</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@300;400;500&family=Syne:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Social Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Custom Cursor -->
+    <div id="cursor"></div>
+    <div id="cursor-ring"></div>
+
+    <!-- Noise Texture -->
+    <div class="noise-overlay"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Tech <span>Ocean</span></div>
+        <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#contact" style="text-decoration: none;"><button class="nav-cta">Start Project</button></a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- Animated ambient background -->
+        <div class="unicorn-hero">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+            <div class="orb orb-4"></div>
+        </div>
+
+        <div class="hero-left">
+            <div class="hero-tag">Surat, India &nbsp;·&nbsp; Est. 2024</div>
+            <h1>
+                <span>We Build</span>
+                <span><em>Software</em></span>
+                <span>That Scales</span>
+            </h1>
+            <p class="hero-desc">
+                From high-converting Shopify storefronts to AI-powered enterprise ERPs — we craft digital infrastructure
+                that grows alongside your business. Deep tech, precision delivered.
+            </p>
+            <div class="hero-actions">
+                <a href="#work"><button class="btn-primary">See Our Work</button></a>
+                <a href="#contact"><button class="btn-ghost">Talk to Us</button></a>
+            </div>
+        </div>
+
+        <div class="hero-right">
+            <div style="position:relative">
+                <div class="badge badge-1">AI Pipeline Active</div>
+                <div class="badge badge-2" style="z-index: 1;">ERP Deployed</div>
+                <div class="terminal-card">
+                    <div class="terminal-bar">
+                        <div class="dot r"></div>
+                        <div class="dot y"></div>
+                        <div class="dot g"></div>
+                        <div class="terminal-title">tech-ocean ~ dev</div>
+                    </div>
+                    <div class="terminal-body">
+                        <code>
+            <span class="cmd">$ </span><span class="arg">deploy --target production</span><br>
+            <span class="cmt">// Shopify theme compiled ✓</span><br>
+            <span class="cmt">// ERP modules bundled ✓</span><br>
+            <span class="cmt">// AI pipeline warmed ✓</span><br>
+            <span class="out">▶ Deploying to edge network...</span><br>
+            <span class="out">✓ Live in 2.3s</span><br>
+            <span class="cmd">$ </span><span class="cursor-blink"></span>
+          </code>
+                        <div class="stat-row">
+                            <div class="stat-pill">
+                                <span class="num">50+</span>
+                                <span class="lbl">Projects</span>
+                            </div>
+                            <div class="stat-pill">
+                                <span class="num">3</span>
+                                <span class="lbl">Products</span>
+                            </div>
+                            <div class="stat-pill">
+                                <span class="num">99%</span>
+                                <span class="lbl">Uptime</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Infinite Marquee -->
+    <div class="marquee-track">
+        <div class="marquee-inner">
+            <span>Website Development</span><span class="accent">✦</span>
+            <span>Shopify Themes</span><span class="accent">✦</span>
+            <span>Custom ERP</span><span class="accent">✦</span>
+            <span>AI Automation</span><span class="accent">✦</span>
+            <span>Mobile Apps</span><span class="accent">✦</span>
+            <span>API Integration</span><span class="accent">✦</span>
+            <span>Cloud Architecture</span><span class="accent">✦</span>
+        </div>
+    </div>
+
+    <!-- Services Section (Editorial Redesign) -->
+    <section class="services" id="services">
+        <div class="section-header">
+            <h2 class="section-title">Our Capabilities</h2>
+        </div>
+        <div class="services-container">
+
+            <div class="service-row">
+                <div class="service-num">01</div>
+                <div class="service-content">
+                    <h3>Shopify & E-Commerce</h3>
+                    <p>High-converting custom storefronts, luxury themes, and headless commerce solutions. From product
+                        pages to checkout — every pixel tuned for conversion.</p>
+                    <div class="tags">
+                        <span class="tag">Liquid</span>
+                        <span class="tag">Shopify 2.0</span>
+                        <span class="tag">Hydrogen</span>
+                        <span class="tag">Headless</span>
+                        <span class="tag">Storefront API</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-row">
+                <div class="service-num">02</div>
+                <div class="service-content">
+                    <h3>Custom Shopify App Development</h3>
+                    <p>Extend Shopify beyond its limits with purpose-built apps — from order routing and WhatsApp
+                        notifications to inventory sync and custom admin dashboards.</p>
+                    <div class="tags">
+                        <span class="tag">Shopify CLI</span>
+                        <span class="tag">Polaris</span>
+                        <span class="tag">GraphQL</span>
+                        <span class="tag">Webhooks</span>
+                        <span class="tag">React</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-row">
+                <div class="service-num">03</div>
+                <div class="service-content">
+                    <h3>Custom Software Development</h3>
+                    <p>Enterprise-grade ERP systems, automation platforms, and internal tools — built to handle the
+                        complexity your industry demands. Diamond, textile, and manufacturing verticals.</p>
+                    <div class="tags">
+                        <span class="tag">.NET / C#</span>
+                        <span class="tag">SQL Server</span>
+                        <span class="tag">WinForms</span>
+                        <span class="tag">ERP / CRM</span>
+                        <span class="tag">HWID Licensing</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-row">
+                <div class="service-num">04</div>
+                <div class="service-content">
+                    <h3>Web Development</h3>
+                    <p>Performant, modern websites that make your first impression count — from brochure sites and
+                        landing pages to complex web portals and SaaS dashboards.</p>
+                    <div class="tags">
+                        <span class="tag">Next.js</span>
+                        <span class="tag">ASP.NET</span>
+                        <span class="tag">React</span>
+                        <span class="tag">CMS</span>
+                        <span class="tag">SEO</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-row">
+                <div class="service-num">05</div>
+                <div class="service-content">
+                    <h3>IT Security Audit</h3>
+                    <p>Comprehensive vulnerability assessments, penetration testing, and compliance audits to harden
+                        your digital infrastructure against threats before they strike.</p>
+                    <div class="tags">
+                        <span class="tag">Pen Testing</span>
+                        <span class="tag">VAPT</span>
+                        <span class="tag">Compliance</span>
+                        <span class="tag">OWASP</span>
+                        <span class="tag">SOC 2</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-row">
+                <div class="service-num">06</div>
+                <div class="service-content">
+                    <h3>Gen AI Development</h3>
+                    <p>Integrate large language models, computer vision, and intelligent automation pipelines directly
+                        into your existing workflows — from prompt engineering to production deployment.</p>
+                    <div class="tags">
+                        <span class="tag">OpenAI</span>
+                        <span class="tag">Gemini</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">ComfyUI</span>
+                        <span class="tag">LangChain</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-row">
+                <div class="service-num">07</div>
+                <div class="service-content">
+                    <h3>Cloud & Software Architecture</h3>
+                    <p>Scalable, secure cloud infrastructure design and migration — from monolith to microservices,
+                        on-premise to edge. We architect systems that don't break at scale.</p>
+                    <div class="tags">
+                        <span class="tag">AWS</span>
+                        <span class="tag">Cloudflare</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">CI/CD</span>
+                        <span class="tag">Microservices</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Unicorn Studio Section (Untouched logic/design) -->
+    <section class="unicorn-section">
+        <div class="unicorn-block">
+            <div class="unicorn-embed-placeholder"></div>
+
+            <!-- Circuit SVG lines -->
+            <div class="circuit-lines">
+                <svg viewBox="0 0 1200 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 240 H200 L240 200 H400 L440 240 H600" stroke="#00FFD1" stroke-width=".5"
+                        stroke-dasharray="4 6" />
+                    <path d="M600 240 H700 L740 280 H900 L940 240 H1200" stroke="#00FFD1" stroke-width=".5"
+                        stroke-dasharray="4 6" />
+                    <path d="M300 0 V120 L340 160 V240" stroke="#00FFD1" stroke-width=".5" stroke-dasharray="4 6" />
+                    <path d="M800 480 V360 L840 320 V240" stroke="#00FFD1" stroke-width=".5" stroke-dasharray="4 6" />
+                    <circle cx="600" cy="240" r="6" fill="#00FFD1" opacity=".5" />
+                    <circle cx="240" cy="200" r="3" fill="#00FFD1" opacity=".4" />
+                    <circle cx="840" cy="320" r="3" fill="#00FFD1" opacity=".4" />
+                    <circle cx="340" cy="160" r="3" fill="#FF8C42" opacity=".6" />
+                </svg>
+            </div>
+
+            <div class="unicorn-content">
+                <p
+                    style="font-family:'DM Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.2em;color:var(--teal);margin-bottom:20px;">
+                    ✦ Powered by Unicorn.studio
+                </p>
+                <h2>Visualise your<br><em>data in motion</em></h2>
+                <p style="margin-top:20px; color: var(--white);">
+                    Interactive particle simulations and fluid WebGL scenes run live in your browser —
+                    no static backgrounds, no stock imagery. Every visit is unique.
+                </p>
+            </div>
+
+            <div class="float-card">
+                <div class="mini-card">
+                    <div class="mini-card-title">ERP Performance</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width:92%"></div>
+                    </div>
+                    <div class="progress-label"><span>Query Speed</span><span style="color:var(--teal)">92ms avg</span>
+                    </div>
+                </div>
+                <div class="mini-card">
+                    <div class="mini-card-title">AI Model Accuracy</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width:97%"></div>
+                    </div>
+                    <div class="progress-label"><span>Render Match</span><span style="color:var(--teal)">97.4%</span>
+                    </div>
+                </div>
+                <div class="mini-card">
+                    <div class="mini-card-title">Shopify Conversion</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width:78%"></div>
+                    </div>
+                    <div class="progress-label"><span>CVR Lift</span><span style="color:var(--teal)">+78%</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="work">
+        <div class="section-header">
+            <h2 class="section-title">Our Work</h2>
+        </div>
+        <div class="portfolio-grid">
+
+            <div class="project-card">
+                <!-- Replace url() with the path to your actual screenshot -->
+                <div class="project-image" style="background-image: url('./images/jewelry-store.jpg');"></div>
+                <div class="project-content">
+                    <div class="project-category">E-Commerce</div>
+                    <h3 class="project-title">Luxury Jewelry Store</h3>
+                    <p class="project-desc">High-converting Shopify storefront specifically tailored for luxury jewelry
+                        retail, featuring a premium aesthetic and seamless user experience.</p>
+                    <div class="tags">
+                        <span class="tag">Shopify</span>
+                        <span class="tag">Liquid</span>
+                        <span class="tag">Web Design</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <!-- Replace url() with the path to your actual screenshot -->
+                <div class="project-image" style="background-image: url('./images/diamond-erp.jpg');"></div>
+                <div class="project-content">
+                    <div class="project-category">Enterprise ERP</div>
+                    <h3 class="project-title">Diamond JobWork Manager</h3>
+                    <p class="project-desc">Desktop ERP software built for diamond manufacturing and job work
+                        management, featuring advanced hardware ID (HWID) licensing and security.</p>
+                    <div class="tags">
+                        <span class="tag">.NET</span>
+                        <span class="tag">WinForms</span>
+                        <span class="tag">Desktop App</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <!-- Replace url() with the path to your actual screenshot -->
+                <div class="project-image" style="background-image: url('images/pingorder.jpg');"></div>
+                <div class="project-content">
+                    <div class="project-category">Custom Shopify App</div>
+                    <h3 class="project-title">Pingorder</h3>
+                    <p class="project-desc">Custom Shopify application that automates WhatsApp message sending for order
+                        notifications, status updates, and customer engagement.</p>
+                    <div class="tags">
+                        <span class="tag">Shopify App</span>
+                        <span class="tag">WhatsApp API</span>
+                        <span class="tag">Node.js</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <!-- Replace url() with the path to your actual screenshot -->
+                <div class="project-image" style="background-image: url('images/reeldisplay.jpg');"></div>
+                <div class="project-content">
+                    <div class="project-category">Custom Shopify App</div>
+                    <h3 class="project-title">Reeldisplay</h3>
+                    <p class="project-desc">Dynamic app that automatically fetches and displays Instagram Reels and
+                        posts directly on Shopify storefronts, eliminating manual updates.</p>
+                    <div class="tags">
+                        <span class="tag">Shopify App</span>
+                        <span class="tag">Instagram API</span>
+                        <span class="tag">Automation</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="portfolio-footer">
+            <a href="work.html"><button class="btn-ghost">View All Projects →</button></a>
+        </div>
+    </section>
+
+    <!-- Technology Stack Ticker -->
+    <section class="tech-stack">
+        <div class="section-header">
+            <h2 class="section-title">Technology</h2>
+        </div>
+        <div class="tech-ticker-wrapper">
+            <div class="tech-ticker">
+                <span class="tech-item-large"><i class="fab fa-microsoft"></i> .NET Core</span>
+                <span class="tech-item-large"><i class="fab fa-python"></i> Python</span>
+                <span class="tech-item-large"><i class="fab fa-shopify"></i> Shopify Liquid</span>
+                <span class="tech-item-large"><i class="fab fa-react"></i> React / Next.js</span>
+                <span class="tech-item-large"><i class="fab fa-aws"></i> AWS / Cloudflare</span>
+                <span class="tech-item-large"><i class="fas fa-database"></i> SQL Server</span>
+                <span class="tech-item-large"><i class="fab fa-docker"></i> Docker</span>
+            </div>
+        </div>
+        <div class="tech-capabilities">
+            <!-- 01 · Cloud Infrastructure -->
+            <div class="cap-item">
+                <div class="cap-visual cap-cloud">
+                    <!-- Network topology SVG -->
+                    <svg class="cloud-svg" viewBox="0 0 280 160" fill="none">
+                        <!-- Grid lines background -->
+                        <line x1="0" y1="40" x2="280" y2="40" stroke="rgba(0,255,209,0.04)" stroke-width="0.5" />
+                        <line x1="0" y1="80" x2="280" y2="80" stroke="rgba(0,255,209,0.04)" stroke-width="0.5" />
+                        <line x1="0" y1="120" x2="280" y2="120" stroke="rgba(0,255,209,0.04)" stroke-width="0.5" />
+                        <line x1="70" y1="0" x2="70" y2="160" stroke="rgba(0,255,209,0.04)" stroke-width="0.5" />
+                        <line x1="140" y1="0" x2="140" y2="160" stroke="rgba(0,255,209,0.04)" stroke-width="0.5" />
+                        <line x1="210" y1="0" x2="210" y2="160" stroke="rgba(0,255,209,0.04)" stroke-width="0.5" />
+                        <!-- Connection lines from cloud to servers -->
+                        <line x1="140" y1="52" x2="70" y2="100" stroke="rgba(0,255,209,0.12)" stroke-width="1"
+                            stroke-dasharray="4 3" />
+                        <line x1="140" y1="52" x2="140" y2="100" stroke="rgba(0,255,209,0.12)" stroke-width="1"
+                            stroke-dasharray="4 3" />
+                        <line x1="140" y1="52" x2="210" y2="100" stroke="rgba(0,255,209,0.12)" stroke-width="1"
+                            stroke-dasharray="4 3" />
+                        <!-- Cross links between servers -->
+                        <line x1="70" y1="108" x2="140" y2="108" stroke="rgba(0,255,209,0.06)" stroke-width="0.5"
+                            stroke-dasharray="2 4" />
+                        <line x1="140" y1="108" x2="210" y2="108" stroke="rgba(0,255,209,0.06)" stroke-width="0.5"
+                            stroke-dasharray="2 4" />
+                        <!-- Proper Cloud shape (centered, larger) -->
+                        <path
+                            d="M113,48 C113,48 113,32 125,32 C125,26 132,20 140,20 C148,20 155,26 155,32 C167,32 167,48 167,48 Z"
+                            fill="rgba(0,255,209,0.03)" stroke="rgba(0,255,209,0.35)" stroke-width="1.2"
+                            stroke-linejoin="round" />
+                        <text x="140" y="43" text-anchor="middle" fill="rgba(0,255,209,0.5)" font-size="7"
+                            font-family="DM Mono, monospace">Cloud</text>
+                        <!-- Server node LEFT -->
+                        <rect x="52" y="95" width="36" height="22" rx="3" fill="rgba(0,255,209,0.02)"
+                            stroke="rgba(0,255,209,0.2)" stroke-width="1" />
+                        <line x1="58" y1="102" x2="82" y2="102" stroke="rgba(0,255,209,0.12)" stroke-width="0.5" />
+                        <line x1="58" y1="107" x2="75" y2="107" stroke="rgba(0,255,209,0.12)" stroke-width="0.5" />
+                        <circle cx="82" cy="112" r="2" fill="rgba(0,255,209,0.4)" />
+                        <!-- Server node CENTER -->
+                        <rect x="122" y="95" width="36" height="22" rx="3" fill="rgba(0,255,209,0.02)"
+                            stroke="rgba(0,255,209,0.2)" stroke-width="1" />
+                        <line x1="128" y1="102" x2="152" y2="102" stroke="rgba(0,255,209,0.12)" stroke-width="0.5" />
+                        <line x1="128" y1="107" x2="145" y2="107" stroke="rgba(0,255,209,0.12)" stroke-width="0.5" />
+                        <circle cx="152" cy="112" r="2" fill="rgba(0,255,209,0.4)" />
+                        <!-- Server node RIGHT -->
+                        <rect x="192" y="95" width="36" height="22" rx="3" fill="rgba(0,255,209,0.02)"
+                            stroke="rgba(0,255,209,0.2)" stroke-width="1" />
+                        <line x1="198" y1="102" x2="222" y2="102" stroke="rgba(0,255,209,0.12)" stroke-width="0.5" />
+                        <line x1="198" y1="107" x2="215" y2="107" stroke="rgba(0,255,209,0.12)" stroke-width="0.5" />
+                        <circle cx="222" cy="112" r="2" fill="rgba(0,255,209,0.4)" />
+                        <!-- Animated data dots -->
+                        <circle r="2" fill="var(--teal)" opacity="0.8">
+                            <animateMotion dur="2.5s" repeatCount="indefinite" path="M140,52 L70,105" />
+                        </circle>
+                        <circle r="2" fill="var(--teal)" opacity="0.8">
+                            <animateMotion dur="3s" repeatCount="indefinite" path="M140,52 L210,105" />
+                        </circle>
+                        <circle r="2" fill="var(--teal)" opacity="0.6">
+                            <animateMotion dur="3.5s" repeatCount="indefinite" path="M140,52 L140,105" />
+                        </circle>
+                        <!-- Region labels -->
+                        <text x="70" y="130" text-anchor="middle" fill="rgba(0,255,209,0.3)" font-size="6"
+                            font-family="DM Mono, monospace">US-EAST</text>
+                        <text x="140" y="130" text-anchor="middle" fill="rgba(0,255,209,0.3)" font-size="6"
+                            font-family="DM Mono, monospace">EU-WEST</text>
+                        <text x="210" y="130" text-anchor="middle" fill="rgba(0,255,209,0.3)" font-size="6"
+                            font-family="DM Mono, monospace">AP-SOUTH</text>
+                    </svg>
+                </div>
+                <h3 class="cap-title">Cloud Infrastructure</h3>
+                <p class="cap-desc">Deploying resilient, auto-scaling environments on AWS and Cloudflare for global
+                    availability.</p>
+            </div>
+            <!-- 02 · Enterprise Security -->
+            <div class="cap-item">
+                <div class="cap-visual cap-security">
+                    <svg class="security-svg" viewBox="0 0 280 160" fill="none">
+                        <!-- Hex grid background -->
+                        <pattern id="hexGrid" width="20" height="17.32" patternUnits="userSpaceOnUse"
+                            patternTransform="translate(0,0)">
+                            <polygon points="10,0 20,5 20,12.32 10,17.32 0,12.32 0,5" fill="none"
+                                stroke="rgba(0,255,209,0.05)" stroke-width="0.5" />
+                        </pattern>
+                        <rect width="280" height="160" fill="url(#hexGrid)" />
+                        <!-- Shield outline -->
+                        <path d="M140,25 L175,38 L175,80 Q175,110 140,130 Q105,110 105,80 L105,38 Z" fill="none"
+                            stroke="rgba(0,255,209,0.15)" stroke-width="1.5" />
+                        <path d="M140,35 L167,45 L167,78 Q167,102 140,118 Q113,102 113,78 L113,45 Z"
+                            fill="rgba(0,255,209,0.02)" stroke="rgba(0,255,209,0.08)" stroke-width="0.8" />
+                        <!-- Lock icon in center -->
+                        <rect x="132" y="68" width="16" height="13" rx="2" fill="none" stroke="rgba(0,255,209,0.5)"
+                            stroke-width="1.2" />
+                        <path d="M136,68 L136,62 Q136,56 140,56 Q144,56 144,62 L144,68" fill="none"
+                            stroke="rgba(0,255,209,0.5)" stroke-width="1.2" />
+                        <circle cx="140" cy="75" r="1.5" fill="var(--teal)" />
+                        <!-- Orbiting ring -->
+                        <circle cx="140" cy="80" r="50" fill="none" stroke="rgba(0,255,209,0.08)" stroke-width="0.5"
+                            stroke-dasharray="3 5">
+                            <animateTransform attributeName="transform" type="rotate" from="0 140 80" to="360 140 80"
+                                dur="20s" repeatCount="indefinite" />
+                        </circle>
+                        <!-- Threat indicators -->
+                        <circle cx="55" cy="40" r="3" fill="none" stroke="rgba(255,80,80,0.25)" stroke-width="0.8">
+                            <animate attributeName="r" values="3;6;3" dur="2s" repeatCount="indefinite" />
+                            <animate attributeName="opacity" values="0.5;0.1;0.5" dur="2s" repeatCount="indefinite" />
+                        </circle>
+                        <text x="55" y="52" text-anchor="middle" fill="rgba(255,80,80,0.2)" font-size="5"
+                            font-family="DM Mono, monospace">BLOCKED</text>
+                        <circle cx="230" cy="55" r="3" fill="none" stroke="rgba(255,80,80,0.25)" stroke-width="0.8">
+                            <animate attributeName="r" values="3;6;3" dur="2.5s" repeatCount="indefinite" />
+                            <animate attributeName="opacity" values="0.5;0.1;0.5" dur="2.5s" repeatCount="indefinite" />
+                        </circle>
+                        <text x="230" y="67" text-anchor="middle" fill="rgba(255,80,80,0.2)" font-size="5"
+                            font-family="DM Mono, monospace">BLOCKED</text>
+                        <!-- Status labels -->
+                        <text x="140" y="100" text-anchor="middle" fill="rgba(0,255,209,0.3)" font-size="6"
+                            font-family="DM Mono, monospace">ZERO-TRUST</text>
+                        <text x="140" y="15" text-anchor="middle" fill="rgba(0,255,209,0.2)" font-size="7"
+                            font-family="DM Mono, monospace">FIREWALL ACTIVE</text>
+                    </svg>
+                    <div class="scan-line"></div>
+                </div>
+                <h3 class="cap-title">Enterprise Security</h3>
+                <p class="cap-desc">Implementing Zero-Trust protocols and advanced SQL encryption to protect sensitive
+                    data at rest.</p>
+            </div>
+            <!-- 03 · Performance Core -->
+            <div class="cap-item">
+                <div class="cap-visual cap-perf">
+                    <svg class="perf-svg" viewBox="0 0 280 160" fill="none">
+                        <!-- Grid background -->
+                        <line x1="30" y1="140" x2="250" y2="140" stroke="rgba(0,255,209,0.08)" stroke-width="0.5" />
+                        <line x1="30" y1="110" x2="250" y2="110" stroke="rgba(0,255,209,0.04)" stroke-width="0.5" />
+                        <line x1="30" y1="80" x2="250" y2="80" stroke="rgba(0,255,209,0.04)" stroke-width="0.5" />
+                        <line x1="30" y1="50" x2="250" y2="50" stroke="rgba(0,255,209,0.04)" stroke-width="0.5" />
+                        <!-- Gauge arc -->
+                        <path d="M90,120 A55,55 0 0,1 190,120" fill="none" stroke="rgba(0,255,209,0.08)"
+                            stroke-width="3" stroke-linecap="round" />
+                        <path d="M90,120 A55,55 0 0,1 185,90" fill="none" stroke="rgba(0,255,209,0.35)" stroke-width="3"
+                            stroke-linecap="round" />
+                        <!-- Tick marks -->
+                        <line x1="90" y1="115" x2="90" y2="125" stroke="rgba(0,255,209,0.2)" stroke-width="0.8" />
+                        <line x1="105" y1="90" x2="110" y2="97" stroke="rgba(0,255,209,0.2)" stroke-width="0.8" />
+                        <line x1="140" y1="65" x2="140" y2="75" stroke="rgba(0,255,209,0.2)" stroke-width="0.8" />
+                        <line x1="175" y1="90" x2="170" y2="97" stroke="rgba(0,255,209,0.2)" stroke-width="0.8" />
+                        <line x1="190" y1="115" x2="190" y2="125" stroke="rgba(0,255,209,0.2)" stroke-width="0.8" />
+                        <!-- Needle -->
+                        <line x1="140" y1="120" x2="178" y2="88" stroke="var(--teal)" stroke-width="1.5"
+                            stroke-linecap="round">
+                            <animateTransform attributeName="transform" type="rotate"
+                                values="-5 140 120;5 140 120;-5 140 120" dur="4s" repeatCount="indefinite" />
+                        </line>
+                        <circle cx="140" cy="120" r="3" fill="var(--teal)" />
+                        <!-- Speed label -->
+                        <text x="140" y="145" text-anchor="middle" fill="rgba(0,255,209,0.5)" font-size="10"
+                            font-family="DM Mono, monospace" font-weight="bold">99.9%</text>
+                        <text x="140" y="153" text-anchor="middle" fill="rgba(0,255,209,0.2)" font-size="5"
+                            font-family="DM Mono, monospace">UPTIME</text>
+                        <!-- Side metrics -->
+                        <text x="30" y="25" fill="rgba(0,255,209,0.2)" font-size="6"
+                            font-family="DM Mono, monospace">LATENCY</text>
+                        <text x="30" y="35" fill="rgba(0,255,209,0.4)" font-size="9"
+                            font-family="DM Mono, monospace">12ms</text>
+                        <text x="220" y="25" fill="rgba(0,255,209,0.2)" font-size="6"
+                            font-family="DM Mono, monospace">THROUGHPUT</text>
+                        <text x="220" y="35" fill="rgba(0,255,209,0.4)" font-size="9"
+                            font-family="DM Mono, monospace">48K rps</text>
+                        <!-- Live pulse dot -->
+                        <circle cx="250" y="28" r="2" fill="var(--teal)">
+                            <animate attributeName="opacity" values="1;0.2;1" dur="1.5s" repeatCount="indefinite" />
+                        </circle>
+                    </svg>
+                </div>
+                <h3 class="cap-title">Performance Core</h3>
+                <p class="cap-desc">Optimizing .NET and React pipelines to achieve sub-second load times and 99.9%
+                    uptime.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Let's build something<br><em>remarkable</em></h2>
+                <p>Ready to upgrade your infrastructure? Drop us a line with your project details and we'll get back to
+                    you within 24 hours.</p>
+            </div>
+            <div class="contact-form">
+                <form>
+                    <div class="input-group">
+                        <input type="text" placeholder="Full Name" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" placeholder="Company / Brand" required>
+                    </div>
+                    <div class="input-group">
+                        <textarea placeholder="Tell us about your project or problem..." rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logo">Tech <span>Ocean</span></div>
+        <div class="footer-socials">
+            <a href="#" class="social-link">LinkedIn</a>
+            <a href="#" class="social-link">Instagram</a>
+            <a href="#" class="social-link">Facebook</a>
+        </div>
+        <div class="footer-right">© 2024 Tech Ocean, Surat · work.sarthakpatel@gmail.com</div>
+    </footer>
+
+    <!-- Social Sidebar -->
+    <div class="social-sidebar">
+        <a href="#" class="s-icon"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="s-icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="s-icon"><i class="fab fa-facebook-f"></i></a>
+        <div class="s-line"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lenis@1.1.2/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
